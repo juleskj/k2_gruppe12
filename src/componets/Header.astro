@@ -26,13 +26,13 @@
   /******** Brugermenu ************/
   @media (max-width: 800px) {
     #menu_toggle:checked ~ ul {
-      right: 0;
+      left: 0;
     }
 
     .menu_knap span {
       position: fixed;
       top: 5px;
-      right: 5px;
+      left: 5px;
       width: 50px;
       height: 50px;
       cursor: pointer;
@@ -42,15 +42,17 @@
     }
 
     .hamburger_menu ul {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
       position: fixed;
       top: 0;
-      right: -100%;
-      width: 200px;
+      left: -100%;
+      width: 150px;
       height: 100%;
       margin: 0;
       padding: 80px 0;
-      text-align: center;
       background-color: gray;
     }
 
@@ -59,7 +61,7 @@
     }
 
     header a {
-      color: gray;
+      color: black;
     }
 
     /**** Skjuler checkbox ****/
@@ -85,24 +87,24 @@
     }
     /*Samlet set betyder #menu_toggle:checked + .menu_knap > span::after, at CSS-reglen vil blive anvendt på pseudo-elementet ::after på <span>-elementet, som er et direkte barn af .menu_knap (label-elementet), når checkboxen med id "menu_toggle" er afkrydset (checked). Dette kan bruges til at tilføje yderligere dekoration eller stil til "hamburger"-ikonet efter det faktiske indhold af <span>.*/
 
-    /**** Viser selve menuen ****/
+    /*Viser selve menuen ****/
     #menu_toggle:checked ~ ul {
-      right: 0 !important;
+      left: 0 !important;
     }
-    /*~: Dette er "general sibling combinator" og vælger alle efterfølgende søskende elementer af det tidligere valgte element, der deler samme forælder.*/
+    /*Dette er "general sibling combinator" og vælger alle efterfølgende søskende elementer af det tidligere valgte element, der deler samme forælder.*/
 
-    /**** Udsseende af burgermenu knappen ****/
+    /*Udsseende af burgermenu knappen ****/
     .menu_knap {
       position: fixed;
       top: 20px;
-      right: 20px;
+      left: 20px;
       width: 26px;
       height: 26px;
       cursor: pointer;
       z-index: 20;
     }
 
-    /**** Viser burgermenu med de 3 streger ****/
+    /**** Viser burgermenu med de 3 streger */
     .menu_knap > span,
     .menu_knap > span::before,
     .menu_knap > span::after {
@@ -110,7 +112,7 @@
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: #fcfbf9;
+      background-color: black;
     }
 
     .menu_knap > span::before {
@@ -142,59 +144,44 @@
     position: sticky;
     top: 0;
     z-index: 20;
-    padding: 5px 0;
   }
 
   header a {
     text-decoration: none;
     padding: 5px 15px;
-    margin: 0 10px;
   }
   ul {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     list-style-type: none;
+    gap: 10px;
   }
 
   .logo_img {
     display: block;
     background-image: url(/public/favicon.svg);
-    width: 80px;
+    width: 50px;
     height: 50px;
     background-repeat: no-repeat;
     background-size: contain;
-  }
-  #logo {
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    color: gray;
   }
 
   /******* Desktop **********/
   @media (min-width: 800px) {
     .logo_img {
-      display: block;
       background-image: url(/public/favicon.svg);
-      width: 80px;
+      width: 50px;
       height: 50px;
     }
-    #logo {
-      color: gray;
-    }
+
     #logo :hover {
       border: none;
-      color: gray;
     }
     li :hover {
-      color: gray;
-      border-bottom: solid 2px gray;
-      border-radius: 2px;
+      border-bottom: solid 2px black;
     }
-    header a {
-      color: gray;
-    }
+
     header {
       background-color: gray;
     }
