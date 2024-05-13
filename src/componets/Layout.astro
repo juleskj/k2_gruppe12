@@ -1,0 +1,25 @@
+---
+//her henter vi titlen samt header og footer
+const { title } = Astro.props;
+import Header from "../componets/Header.astro";
+import Footer from "../componets/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- her er titlen for siden -->
+    <link rel="stylesheet" href="/general.css" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
