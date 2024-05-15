@@ -3,3 +3,37 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --offWhite: #fdfafa;
+  --offBlack: #262222;
+  --lyserRoed50: #fdf4f5;
+  --lyserRoed200: #f4d8db;
+  --lyserRoed400: #dd949f;
+  --lyserRoed600: #b54962;
+  --orange600: #c55c3c;
+  --gul500: #d88e38;
+  --groen200: #e6e2b0;
+  --brun100: #eae0d7;
+}
+
+/************************ Fonte Mobil ************************/
+h1 {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2,
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+p,
+a,
+input,
+textarea {
+  font-family: "Biryani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
