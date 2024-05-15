@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 :root {
   --offWhite: #fdfafa;
   --offBlack: #262222;
@@ -109,6 +115,11 @@ textarea {
   .card_h2 {
     font-family: "Josefin Sans", sans-serif;
     font-size: 20px;
+  }
+
+  main {
+    margin: 0 auto 0 auto;
+    max-width: 1200px;
   }
 }
 
