@@ -1,0 +1,126 @@
+---
+
+---
+
+<footer>
+  <div class="kontakt">
+    <h2>Kontakt</h2>
+    <ul>
+      <li>Tlf. +45 86 88 24 00</li>
+      <li>Mail. Knoop@c.dk</li>
+    </ul>
+  </div>
+  <div class="genvej">
+    <h2>Genvej</h2>
+    <ul>
+      <li><a href="/omk2">Om K2</a></li>
+      <li><a href="/kontakt">Kontakt</a></li>
+
+      <li><a href="/handelsbetingelser">Handelsbetingelser</a></li>
+    </ul>
+  </div>
+  <div class="abningstider">
+    <h2>Åbningstider</h2>
+    <ul>
+      <li>Mandag: 10.00-17.00</li>
+      <li>Tirsdag: 10.00-17.00</li>
+      <li>Onsdag: 10.00-17.00</li>
+      <li>Torsdag: 10.00-17.00</li>
+      <li>Fredag: 10.00-17.00</li>
+      <li>Lørdag: 10.00-17.00</li>
+      <li>Søndag: LUKKET</li>
+    </ul>
+  </div>
+
+  <div class="map">
+    <h3>Lyngby Hovedgade 72, 2800 Kongens Lyngby</h3>
+    <iframe
+      class="responsive-iframe"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.3664825516435!2d12.501878976758745!3d55.769506590704616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46524f2d0e6d4b0b%3A0xeb730b552c04fa14!2sK2!5e0!3m2!1sen!2sdk!4v1715776446123!5m2!1sen!2sdk"
+      width="300"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</footer>
+
+<style>
+  @media (max-width: 800px) {
+    footer {
+      text-align: center;
+    }
+  }
+  footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  footer h2 {
+    padding-bottom: 1rem;
+  }
+  .genvej ul,
+  .abningstider ul,
+  .kontakt ul,
+  .map {
+    gap: 0.4rem;
+  }
+
+  .abningstider ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  li {
+    list-style-type: none;
+  }
+  .abningstider ul :last-child {
+    color: var(--lyserRoed600);
+  }
+
+  .genvej ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .genvej ul li a {
+    color: var(--offBlack);
+  }
+
+  .map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .map h3 {
+    color: var(--lyserRoed600);
+  }
+  .responsive-iframe {
+    aspect-ratio: 1/1;
+    width: 100%;
+  }
+
+  @media (min-width: 800px) {
+    footer {
+      flex-flow: row;
+      align-items: flex-start;
+      padding: 50px 20px 0 20px;
+      text-align: none;
+    }
+    footer :last-child {
+      min-height: 100px;
+      max-height: 300px;
+      max-width: 300px;
+    }
+
+    .map {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  }
+</style>
