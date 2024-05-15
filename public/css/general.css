@@ -119,11 +119,11 @@ textarea {
 
   main {
     margin: 0 auto 0 auto;
-    max-width: 1200px;
+    max-width: 1150px;
   }
 }
 
 /************************ Baggrundsfarve ************************/
-main {
+body {
   background-color: var(--offWhite);
 }
