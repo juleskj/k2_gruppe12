@@ -17,16 +17,27 @@
   --brun100: #eae0d7;
 }
 
-/************************ Fonte Mobil ************************/
+/************************ Fonte ************************/
 h1 {
   font-family: "Prata", serif;
   font-weight: 400;
   font-style: normal;
+  text-transform: uppercase;
+  color: var(--offBlack);
 }
 
 h2,
 h3 {
   font-family: "Josefin Sans", sans-serif;
+  color: var(--offBlack);
+}
+
+li a {
+  font-family: "Biryani", sans-serif;
+  font-weight: 400;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--lyserRoed600);
 }
 
 p,
@@ -36,4 +47,72 @@ textarea {
   font-family: "Biryani", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: var(--offBlack);
+}
+
+/************************ Size ************************/
+
+/************* Mobil *************/
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+li a {
+  font-size: 18px;
+}
+
+p,
+a,
+input,
+textarea {
+  font-size: 18px;
+}
+
+/************* Desktop *************/
+@media (min-width: 800px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}
+
+/************************ Fonte card ************************/
+
+/************* Mobil *************/
+.card_h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+}
+
+.card_h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+}
+
+/************* Desktop *************/
+@media (min-width: 800px) {
+  .card_h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+  }
+}
+
+/************************ Baggrundsfarve ************************/
+main {
+  background-color: var(--offWhite);
 }
