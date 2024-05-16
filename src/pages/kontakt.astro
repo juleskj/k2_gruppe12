@@ -3,7 +3,62 @@ import Layout from "../componets/Layout.astro";
 ---
 
 <Layout titel="Kontakt">
-  <h1>KONTAKT</h1>
+  <div class="grid">
+    <div class="abningstider">
+      <h1 class="aabningstider_h1">Åbningstider</h1>
+      <ul>
+        <li>Mandag: 10.00-17.00</li>
+        <li>Tirsdag: 10.00-17.00</li>
+        <li>Onsdag: 10.00-17.00</li>
+        <li>Torsdag: 10.00-17.00</li>
+        <li>Fredag: 10.00-17.00</li>
+        <li>Lørdag: 10.00-17.00</li>
+        <li>Søndag: LUKKET</li>
+      </ul>
+    </div>
+
+    <div class="map">
+      <iframe
+        class="responsive-iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.3664825516435!2d12.501878976758745!3d55.769506590704616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46524f2d0e6d4b0b%3A0xeb730b552c04fa14!2sK2!5e0!3m2!1sen!2sdk!4v1715776446123!5m2!1sen!2sdk"
+        width="650"
+        height="250"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <h3>Lyngby Hovedgade 72, 2800 Kongens Lyngby</h3>
+    </div>
+  </div>
 </Layout>
 
-<style></style>
+<style>
+  .aabningstider_h1,
+  h3 {
+    color: var(--lyserRoed600);
+  }
+
+  .abningstider ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  li {
+    list-style-type: none;
+  }
+  .abningstider ul :last-child {
+    color: var(--lyserRoed600);
+  }
+
+  @media (min-width: 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+    }
+
+    .map {
+      grid-column: span 2;
+    }
+  }
+</style>
