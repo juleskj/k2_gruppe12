@@ -116,14 +116,29 @@ textarea {
     font-family: "Josefin Sans", sans-serif;
     font-size: 20px;
   }
-
-  main {
-    margin: 0 auto 0 auto;
-    max-width: 1150px;
-  }
 }
 
 /************************ Baggrundsfarve ************************/
 body {
   background-color: var(--offWhite);
+}
+
+/************************ Luft ************************/
+/************* Mobil *************/
+body {
+  padding: 25px;
+  padding-top: 60px;
+}
+
+/************* Desktop *************/
+@media (min-width: 800px) {
+  main {
+    margin: 0 auto 0 auto;
+    max-width: 1150px;
+  }
+
+  body {
+    padding: 0px;
+    padding-top: 0px;
+  }
 }
