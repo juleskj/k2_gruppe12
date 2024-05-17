@@ -3,6 +3,42 @@ import Layout from "../componets/Layout.astro";
 ---
 
 <Layout titel="Forside">
+  <img src="/public/img/kontakt_placeholder.png" alt="placeholder for video" />
+  <div class="toej">
+    <div class="toej-slide">
+      <img src="/public/img/sissel_slider_1.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_2.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_3.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_4.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_5.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_6.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_7.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_8.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_9.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_10.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_11.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_12.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_13.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_14.webp" alt="kjole fra Sissel Edelbo" />
+    </div>
+    <div class="toej-slide">
+      <img src="/public/img/sissel_slider_1.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_2.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_3.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_4.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_5.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_6.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_7.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_8.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_9.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_10.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_11.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_12.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_13.webp" alt="kjole fra Sissel Edelbo" />
+      <img src="/public/img/sissel_slider_14.webp" alt="kjole fra Sissel Edelbo" />
+    </div>
+  </div>
+
   <blockquote
     class="instagram-media"
     data-instgrm-captioned
@@ -56,7 +92,40 @@ import Layout from "../componets/Layout.astro";
 </Layout>
 
 <style>
-  h2 {
-    color: var(--lyserRoed600);
+  /***************************** Tøj infinite carousel  ******************************/
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .toej {
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .toej:hover .toej-slide {
+    animation-play-state: paused;
+  }
+  .toej-slide {
+    display: inline-block;
+    animation: 45s slide infinite linear;
+  }
+
+  .toej-slide img {
+    width: auto;
+    height: 80px;
+  }
+  /***** Desktop *****/
+  @media (min-width: 800px) {
+    .toej-slide img {
+      height: 200px;
+    }
   }
 </style>
+
+<script></script>

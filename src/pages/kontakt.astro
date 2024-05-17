@@ -27,51 +27,58 @@ import Layout from "../componets/Layout.astro";
         referrerpolicy="no-referrer-when-downgrade"></iframe>
       <p class="adresse">Lyngby Hovedgade 72, 2800 Kongens Lyngby<p></p></p>
     </div>
+  </div>
+  <div>
+    <img src="/public/img/kontakt_placeholder.png" alt="Billeder af butikken" />
+  </div>
+</Layout>
 
-    <style>
-      iframe {
-        width: 320px;
-        height: 250px;
-      }
-      .aabningstider_h1,
-      .adresse {
-        color: var(--lyserRoed600);
-      }
+<style>
+  iframe {
+    width: 320px;
+    height: 250px;
+  }
+  .aabningstider_h1,
+  .adresse {
+    color: var(--lyserRoed600);
+  }
 
-      .aabningstider_h1 {
-        padding-bottom: 20px;
-      }
+  .aabningstider_h1 {
+    padding-bottom: 20px;
+  }
 
-      .abningstider ul {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      li {
-        list-style-type: none;
-        padding-bottom: 5px;
-      }
-      .abningstider ul :last-child {
-        color: var(--lyserRoed600);
-      }
+  .abningstider {
+    padding-bottom: 20px;
+  }
 
-      @media (min-width: 800px) {
-        .grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 50px;
-        }
+  .abningstider ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  li {
+    list-style-type: none;
+    padding-bottom: 5px;
+  }
+  .abningstider ul :last-child {
+    color: var(--lyserRoed600);
+  }
 
-        .map {
-          grid-column: 2/4;
-          padding-top: 65px;
-        }
+  @media (min-width: 800px) {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 50px;
+    }
 
-        iframe {
-          width: 600px;
-          height: 250px;
-        }
-      }
-    </style>
-  </div></Layout
->
+    .map {
+      grid-column: 3/4;
+      padding-top: 65px;
+    }
+
+    iframe {
+      width: 700px;
+      height: 300px;
+    }
+  }
+</style>
