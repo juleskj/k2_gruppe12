@@ -49,7 +49,8 @@ li a {
 p,
 a,
 input,
-textarea {
+textarea,
+li {
   font-family: "Biryani", sans-serif;
   font-weight: 400;
   font-style: normal;
