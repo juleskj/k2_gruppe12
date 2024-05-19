@@ -3,7 +3,138 @@ import Layout from "../componets/Layout.astro";
 ---
 
 <Layout titel="Betaling">
-  <h1>BETALINGSFORMAT</h1>
+  <form class="person_info">
+    <fieldset>
+      <legend>Levering:</legend>
+
+      <input
+        type="text"
+        id="fnavn"
+        name="fnavn"
+        placeholder="Dit fornavn"
+        required
+      />
+
+      <input
+        type="text"
+        id="name"
+        name="enavn"
+        placeholder="Dit efternavn"
+        required
+      />
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Din email"
+        required
+      />
+
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Telefon nummer"
+        required
+      />
+
+      <input
+        type="text"
+        id="address"
+        name="address"
+        placeholder="Din adresse"
+        required
+      />
+
+      <input
+        type="number"
+        id="zipcode"
+        name="zipcode"
+        placeholder="Postnummer"
+        required
+      />
+
+      <input type="text" id="city" name="city" placeholder="By" required />
+    </fieldset>
+  </form>
+  <form class="betallings_metode"></form>
+  <fieldset>
+    <legend>Betallings metode:</legend>
+    <input
+      type="radio"
+      id="betallingskort"
+      name="betalling_metode"
+      value="Betallingskort"
+      checked
+    />
+    <label for="betallingskort">Betallingskort</label><br />
+
+    <input
+      type="radio"
+      id="mobilepay"
+      name="betalling_metode"
+      value="Mobilepay"
+    />
+    <label for="mobilepay">Mobilepay</label><br />
+    <input type="radio" id="faktura" name="betalling_metode" value="Faktura" />
+    <label for="faktura">Faktura</label><br /><br />
+    <input type="submit" value="Submit" />
+  </fieldset>
 </Layout>
 
-<style></style>
+<div class="produkt_info"></div>
+
+<style>
+  .person_info {
+    display: flex;
+    flex-flow: column;
+  }
+
+  fieldset {
+    border: 2px solid var(--lyserRoed600);
+    padding: 20px;
+    margin-top: 50px;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 100%;
+    margin: 5px 0;
+    padding: 2px 2px;
+    border: 2px solid var(--lyserRoed600);
+  }
+  /* når man er i fæltet */
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus,
+  input[type="email"]:focus {
+    outline: solid 1px var(--lyserRoed600);
+    background-color: var(--lyserRoed200);
+    transition: all 0.3s ease-in-out;
+  }
+
+  input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    color: white;
+    border: 2px solid var(--lyserRoed600);
+    background-color: var(--lyserRoed600);
+  }
+
+  input[type="submit"]:hover {
+    background-color: var(--lyserRoed400);
+    transition: 0.5s;
+  }
+
+  .betallings_metode {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr;
+  }
+
+  input[type="radio"]:checked {
+    accent-color: var(--lyserRoed600);
+  }
+</style>
