@@ -2,88 +2,146 @@
 import Layout from "../componets/Layout.astro";
 ---
 
-<Layout titel="Betaling">
-  <form class="person_info">
-    <fieldset>
-      <legend>Levering:</legend>
+<Layout titel="Betaling"
+  ><div class="betalling_side">
+    <div class="produkt_info order">
+      <h2>placeholder</h2>
+      <div class="card">
+        <img src="/public/img/placeholder.png" alt="placeholder" />
+        <div class="info">
+          <p class="str">str: 37</p>
+          <p class="before_pris">Før: 1000Dkk</p>
+          <p class="new_pris">800DKK</p>
+        </div>
+      </div>
+      <form class="rabat_form">
+        <input
+          type="text"
+          id="rabat_kode"
+          name="rabat_kode"
+          placeholder="Indsæt rabat kode"
+        />
 
-      <input
-        type="text"
-        id="fnavn"
-        name="fnavn"
-        placeholder="Dit fornavn"
-        required
-      />
+        <input type="submit" value="Indløs" />
+      </form>
+      <div class="udgifter">
+        <div class="udgifter_info">
+          <p>Rabat</p>
+          <p>Subtotal</p>
+          <p>Levering</p>
+          <p><strong>I Alt</strong></p>
+        </div>
+        <div class="udgifter_tal">
+          <p class="rabat">200 DKK</p>
+          <p class="subtotal">800 DKK</p>
+          <p>Gratis</p>
+          <p class="i_alt"><strong>600 DKK</strong></p>
+        </div>
+      </div>
+    </div>
+    <form class="person_info">
+      <fieldset>
+        <legend>Levering:</legend>
+        <input
+          type="radio"
+          id="levering_hjem"
+          name="leverings_sted"
+          value="Levering til døren"
+        />
+        <label for="levering_hjem">Levering til døren</label><br />
+        <input
+          type="radio"
+          id="afhent_butik"
+          name="leverings_sted"
+          value="Afhent i butik"
+        />
+        <label for="afhent_butik">Afhent i butik</label>
+        <br />
+        <br />
+        <input
+          type="text"
+          id="fnavn"
+          name="fnavn"
+          placeholder="Dit fornavn"
+          required
+        />
 
-      <input
-        type="text"
-        id="name"
-        name="enavn"
-        placeholder="Dit efternavn"
-        required
-      />
+        <input
+          type="text"
+          id="name"
+          name="enavn"
+          placeholder="Dit efternavn"
+          required
+        />
 
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Din email"
-        required
-      />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Din email"
+          required
+        />
 
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        placeholder="Telefon nummer"
-        required
-      />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Telefon nummer"
+          required
+        />
 
-      <input
-        type="text"
-        id="address"
-        name="address"
-        placeholder="Din adresse"
-        required
-      />
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder="Din adresse"
+          required
+        />
+        <input type="text" id="land" name="land" placeholder="Land" required />
 
-      <input
-        type="number"
-        id="zipcode"
-        name="zipcode"
-        placeholder="Postnummer"
-        required
-      />
+        <input
+          type="number"
+          id="zipcode"
+          name="zipcode"
+          placeholder="Postnummer"
+          required
+        />
 
-      <input type="text" id="city" name="city" placeholder="By" required />
-    </fieldset>
-  </form>
-  <form class="betallings_metode"></form>
-  <fieldset>
-    <legend>Betallings metode:</legend>
-    <input
-      type="radio"
-      id="betallingskort"
-      name="betalling_metode"
-      value="Betallingskort"
-      checked
-    />
-    <label for="betallingskort">Betallingskort</label><br />
+        <input type="text" id="city" name="city" placeholder="By" required />
+      </fieldset>
 
-    <input
-      type="radio"
-      id="mobilepay"
-      name="betalling_metode"
-      value="Mobilepay"
-    />
-    <label for="mobilepay">Mobilepay</label><br />
-    <input type="radio" id="faktura" name="betalling_metode" value="Faktura" />
-    <label for="faktura">Faktura</label><br /><br />
-    <input type="submit" value="Submit" />
-  </fieldset>
+      <form class="betallings_metode">
+        <fieldset>
+          <legend>Betallings metode:</legend>
+          <input
+            type="radio"
+            id="betallingskort"
+            name="betalling_metode"
+            value="Betallingskort"
+            checked
+          />
+          <label for="betallingskort">Betallingskort</label><br />
+
+          <input
+            type="radio"
+            id="mobilepay"
+            name="betalling_metode"
+            value="Mobilepay"
+          />
+          <label for="mobilepay">Mobilepay</label><br />
+          <input
+            type="radio"
+            id="faktura"
+            name="betalling_metode"
+            value="Faktura"
+          />
+          <label for="faktura">Faktura</label><br /><br />
+          <input type="submit" value="Køb" />
+        </fieldset>
+      </form>
+    </form>
+  </div>
 </Layout>
-
-<div class="produkt_info"></div>
 
 <style>
   .person_info {
@@ -95,6 +153,9 @@ import Layout from "../componets/Layout.astro";
     border: 2px solid var(--lyserRoed600);
     padding: 20px;
     margin-top: 50px;
+  }
+  legend {
+    font-size: 20px;
   }
   input[type="text"],
   input[type="number"],
@@ -133,8 +194,58 @@ import Layout from "../componets/Layout.astro";
 
     grid-template-rows: 1fr 1fr;
   }
-
+  input[type="radio"] {
+    width: 30px;
+  }
   input[type="radio"]:checked {
     accent-color: var(--lyserRoed600);
+  }
+
+  input[type="radio"]:hover {
+    accent-color: var(--lyserRoed600);
+  }
+  .card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .card img,
+  .info {
+    width: 100px;
+    flex: 1 1 auto;
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: end;
+  }
+  .new_pris {
+    grid-area: 2/ 2 / 3 /3;
+  }
+
+  form {
+    padding: 20px 0;
+  }
+
+  .udgifter {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 800px) {
+    .betalling_side {
+      gap: 50px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .order {
+      order: 2;
+    }
   }
 </style>
