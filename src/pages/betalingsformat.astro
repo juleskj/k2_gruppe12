@@ -2,8 +2,8 @@
 import Layout from "../componets/Layout.astro";
 ---
 
-<Layout titel="Betaling"
-  ><div class="betalling_side">
+<Layout titel="Betaling">
+  <div class="betalling_side">
     <div class="produkt_info order">
       <h2>placeholder</h2>
       <div class="card">
@@ -15,7 +15,12 @@ import Layout from "../componets/Layout.astro";
         </div>
       </div>
       <form class="rabat_form">
-        <input type="text" id="rabat_kode" name="rabat_kode" placeholder="Indsæt rabat kode" />
+        <input
+          type="text"
+          id="rabat_kode"
+          name="rabat_kode"
+          placeholder="Indsæt rabat kode"
+        />
 
         <input type="submit" value="Indløs" />
       </form>
@@ -34,47 +39,140 @@ import Layout from "../componets/Layout.astro";
         </div>
       </div>
     </div>
-    <form class="person_info">
-      <fieldset>
-        <legend>Levering:</legend>
-        <input type="radio" id="levering_hjem" name="leverings_sted" value="Levering til døren" />
-        <label for="levering_hjem">Levering til døren</label><br />
-        <input type="radio" id="afhent_butik" name="leverings_sted" value="Afhent i butik" />
-        <label for="afhent_butik">Afhent i butik</label>
-        <br />
-        <br />
-        <input type="text" id="fnavn" name="fnavn" placeholder="Dit fornavn" required />
 
-        <input type="text" id="name" name="enavn" placeholder="Dit efternavn" required />
+    <div class="betaling_levering">
+      <form class="person_info">
+        <fieldset>
+          <legend>Levering:</legend>
+          <input
+            type="radio"
+            id="hjem"
+            name="leverings_sted"
+            value="Levering til døren"
+          />
+          <label for="levering_hjem">Levering til døren</label><br />
+          <input
+            type="radio"
+            id="butik"
+            name="leverings_sted"
+            value="Afhent i butik"
+          />
+          <label for="afhent_butik">Afhent i butik</label>
+          <br />
+          <br />
+          <div class="hjem_levering">
+            <input
+              type="text"
+              id="fnavn"
+              name="fnavn"
+              placeholder="Dit fornavn"
+              required
+            />
 
-        <input type="email" id="email" name="email" placeholder="Din email" required />
+            <input
+              type="text"
+              id="name"
+              name="enavn"
+              placeholder="Dit efternavn"
+              required
+            />
 
-        <input type="tel" id="phone" name="phone" placeholder="Telefon nummer" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Din email"
+              required
+            />
 
-        <input type="text" id="address" name="address" placeholder="Din adresse" required />
-        <input type="text" id="land" name="land" placeholder="Land" required />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Telefon nummer"
+              required
+            />
 
-        <input type="number" id="zipcode" name="zipcode" placeholder="Postnummer" required />
+            <input
+              type="text"
+              id="address"
+              name="address"
+              placeholder="Din adresse"
+              required
+            />
+            <input
+              type="text"
+              id="land"
+              name="land"
+              placeholder="Land"
+              required
+            />
 
-        <input type="text" id="city" name="city" placeholder="By" required />
-      </fieldset>
+            <input
+              type="number"
+              id="zipcode"
+              name="zipcode"
+              placeholder="Postnummer"
+              required
+            />
 
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="By"
+              required
+            />
+          </div>
+        </fieldset>
+      </form>
       <form class="betallings_metode">
         <fieldset>
           <legend>Betallings metode:</legend>
-          <input type="radio" id="betallingskort" name="betalling_metode" value="Betallingskort" checked />
+          <input
+            type="radio"
+            id="betallingskort"
+            name="betalling_metode"
+            value="Betallingskort"
+            checked
+          />
           <label for="betallingskort">Betallingskort</label><br />
 
-          <input type="radio" id="mobilepay" name="betalling_metode" value="Mobilepay" />
+          <input
+            type="radio"
+            id="mobilepay"
+            name="betalling_metode"
+            value="Mobilepay"
+          />
           <label for="mobilepay">Mobilepay</label><br />
-          <input type="radio" id="faktura" name="betalling_metode" value="Faktura" />
+          <input
+            type="radio"
+            id="faktura"
+            name="betalling_metode"
+            value="Faktura"
+          />
           <label for="faktura">Faktura</label><br /><br />
           <input type="submit" value="Køb" />
         </fieldset>
       </form>
-    </form>
+    </div>
   </div>
 </Layout>
+
+<script>
+  // if (document.getElementById("hjem").checked) {
+  //   var selectedValue = document.getElementById("hjem").value;
+  //   document.querySelector(".person_levering").classList.remove(none);
+  // }
+
+  // var getSelectedValue = document.getElementById('input[id="butik"]:checked');
+  // if (getSelectedValue != null) {
+  //   console.log("Hello world!");
+  // } else {
+  //   console.log("no");
+  // }
+  // document.queryselector(".person_info")classList.add ="none";
+</script>
 
 <style>
   .person_info {
