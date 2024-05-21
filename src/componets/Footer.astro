@@ -33,7 +33,7 @@
   </div>
 
   <div class="map">
-    <h3>Lyngby Hovedgade 72, 2800 Kongens Lyngby</h3>
+    <p>Lyngby Hovedgade 72, 2800 Kongens Lyngby</p>
     <iframe
       class="responsive-iframe"
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.3664825516435!2d12.501878976758745!3d55.769506590704616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46524f2d0e6d4b0b%3A0xeb730b552c04fa14!2sK2!5e0!3m2!1sen!2sdk!4v1715776446123!5m2!1sen!2sdk"
@@ -57,7 +57,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    gap: 7rem;
+    gap: 4rem;
   }
 
   footer h2 {
@@ -93,6 +93,7 @@
   .genvej ul {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .genvej ul li a {
@@ -105,10 +106,10 @@
   .map {
     display: flex;
     flex-direction: column;
-    align-items: center;
+
     justify-content: center;
   }
-  .map h3 {
+  .map p {
     color: var(--lyserRoed600);
   }
   .responsive-iframe {
@@ -126,6 +127,7 @@
       align-items: flex-start;
       padding: 50px 20px 0 20px;
       text-align: none;
+      gap: 7rem;
     }
     footer :last-child {
       min-height: 100px;
@@ -135,7 +137,6 @@
 
     .map {
       flex-direction: column-reverse;
-      text-align: center;
     }
   }
 </style>
