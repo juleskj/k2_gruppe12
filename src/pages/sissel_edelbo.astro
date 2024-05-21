@@ -2,7 +2,13 @@
 import Layout from "../componets/Layout.astro";
 ---
 
-<Layout titel="Sissel Edelbo">
+<Layout
+  titel="Sissel Edelbo"
+  hero_img="/public/img/hero_sissel.webp"
+  hero_tekst="SISSEL EDELBO"
+  hero_undertekst="Kan Kun KØBES I BUTIK"
+  hasImg="true"
+>
   <h1>SISSEL EDELBO</h1>
   <div class="om_kjoler">
     <div class="col">
@@ -129,6 +135,9 @@ import Layout from "../componets/Layout.astro";
 </Layout>
 
 <style>
+  h1 {
+    padding-top: 5rem;
+  }
   h2 {
     padding: 15px 0;
   }
@@ -136,10 +145,7 @@ import Layout from "../componets/Layout.astro";
   h2 {
     color: var(--offWhite);
   }
-  img,
-  .om_kjoler div {
-    margin-top: 20px;
-  }
+
   .om_kjoler .col,
   .om_sissel {
     background-color: var(--gul500);
@@ -152,7 +158,7 @@ import Layout from "../componets/Layout.astro";
   .om_kjoler {
     display: flex;
     flex-direction: column;
-    padding-bottom: 80px;
+    gap: 10px;
   }
 
   .om_kjoler .order {
@@ -162,10 +168,12 @@ import Layout from "../componets/Layout.astro";
   .kjoler_i_butik {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px;
   }
   .kjole_img {
     width: 150px;
     flex: 1 1 auto;
+    object-fit: cover;
   }
 
   .om_kjoler div,
@@ -175,15 +183,18 @@ import Layout from "../componets/Layout.astro";
   }
 
   .om_sissel {
-    margin: 40px 0;
+    margin: 15rem 0;
   }
   .om_sissel p {
     padding: 20px 0;
   }
 
+  .queute {
+    text-align: center;
+  }
+
   @media (min-width: 800px) {
     .kjoler_i_butik {
-      gap: 10px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 1fr);
@@ -205,6 +216,7 @@ import Layout from "../componets/Layout.astro";
     .om_kjoler {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 20px;
     }
 
     .om_kjoler .order {
