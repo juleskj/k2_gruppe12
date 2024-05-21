@@ -1,5 +1,6 @@
 ---
 import Layout from "../componets/Layout.astro";
+import Buttons from "../componets/Buttons.astro";
 ---
 
 <Layout titel="Forside">
@@ -56,15 +57,18 @@ import Layout from "../componets/Layout.astro";
     </div>
   </div>
 
-  <blockquote
-    class="instagram-media"
-    data-instgrm-captioned
-    data-instgrm-permalink="https://www.instagram.com/p/C7CrqsrscdB/?utm_source=ig_embed&utm_campaign=loading"
-    data-instgrm-version="14"
-    style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"
-  >
-  </blockquote>
-  <script async src="//www.instagram.com/embed.js"></script>
+  <div class="billede_med_tekst">
+    <div class="background-image">
+      <div class="tekstbox">
+        <h2 class="luft_om_h2">Om K2</h2>
+        <p class="p luft_om">Marie Louise og Ole har i gennem mange år, budt på lækre sko og tøj, som kommer fra de dygtigste designere og er tilgængelige både i vores hyggelige butik på Lyngby Hovedgade 72 og online på vores webshop.</p>
+        <p class="p luft_om">Dyk ned i vores verden af elegance og stil, hvor hver en detalje er nøje udvalgt til at forkæle dine sanser.</p>
+        <div>
+          <Buttons variant="primary"><a class="button" href="/omk2">Læs mere</a></Buttons>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
 
 <style>
@@ -94,7 +98,7 @@ import Layout from "../componets/Layout.astro";
 
   .toej-slide img {
     width: auto;
-    height: 80px;
+    height: 100px;
   }
 
   /***** Desktop *****/
@@ -128,7 +132,7 @@ import Layout from "../componets/Layout.astro";
 
   .sissel-slide img {
     width: auto;
-    height: 22px;
+    height: 28px;
   }
   /***** Desktop *****/
   @media (min-width: 800px) {
@@ -136,6 +140,63 @@ import Layout from "../componets/Layout.astro";
       height: 32px;
     }
   }
+
+  /***************************** Billide med tekstbox  ******************************/
+
+  .background-image {
+    background-image: url(/public/img/kontakt_placeholder_2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+  }
+
+  .billede_med_tekst {
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  .tekstbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: rgba(255, 250, 250, 0.8);
+    padding: 30px;
+  }
+
+  .p {
+    width: 200px;
+  }
+
+  .luft_om {
+    padding-bottom: 15px;
+  }
+  .luft_om_h2 {
+    padding-bottom: 25px;
+  }
+
+  /*Desktop*/
+  @media (min-width: 800px) {
+    .background-image {
+      background-image: url(/public/img/kontakt_placeholder.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 600px;
+    }
+    .tekstbox {
+      transform: translate(-100%, -50%);
+    }
+
+    .p {
+      width: 400px;
+    }
+  }
+
+  /***************************** Knap ******************************/
 </style>
 
 <script></script>
