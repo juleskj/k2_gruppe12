@@ -9,6 +9,24 @@ import Layout from "../componets/Layout.astro";
   hero_undertekst="Kan Kun KØBES I BUTIK"
   hasImg="true"
 >
+  <!-- ***************sissel slider*************** -->
+
+  <div class="sissel">
+    <div class="sissel-slide">
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+    </div>
+    <div class="sissel-slide">
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+    </div>
+  </div>
   <h1>SISSEL EDELBO</h1>
   <div class="om_kjoler">
     <div class="col">
@@ -193,7 +211,38 @@ import Layout from "../componets/Layout.astro";
     text-align: center;
   }
 
+  /***************************** Sissel Edelbo infinite carousel  ******************************/
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .sissel {
+    min-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--groen200);
+  }
+
+  .sissel-slide {
+    display: inline-block;
+    animation: 45s slide infinite linear;
+  }
+
+  .sissel-slide img {
+    width: auto;
+    height: 22px;
+  }
+
   @media (min-width: 800px) {
+    .sissel-slide img {
+      height: 32px;
+    }
     .kjoler_i_butik {
       display: grid;
       grid-template-columns: repeat(4, 1fr);

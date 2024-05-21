@@ -7,7 +7,7 @@
     <h2>Kontakt</h2>
     <ul>
       <li>Tlf. +45 86 88 24 00</li>
-      <li>Mail. Knoop@c.dk</li>
+      <li>Mail. <span class="underline">Knoop@c.dk</span></li>
     </ul>
   </div>
   <div class="genvej">
@@ -22,13 +22,13 @@
   <div class="abningstider">
     <h2>Åbningstider</h2>
     <ul>
-      <li>Mandag: 10.00-17.00</li>
-      <li>Tirsdag: 10.00-17.00</li>
-      <li>Onsdag: 10.00-17.00</li>
-      <li>Torsdag: 10.00-17.00</li>
-      <li>Fredag: 10.00-17.00</li>
-      <li>Lørdag: 10.00-17.00</li>
-      <li>Søndag: LUKKET</li>
+      <li>Mandag: <span></span>10.00-17.00</li>
+      <li>Tirsdag: <span></span>10.00-17.00</li>
+      <li>Onsdag: <span></span>10.00-17.00</li>
+      <li>Torsdag: <span></span>10.00-17.00</li>
+      <li>Fredag:<span></span> 10.00-17.00</li>
+      <li>Lørdag: <span></span>10.00-17.00</li>
+      <li>Søndag: <span></span>LUKKET</li>
     </ul>
   </div>
 
@@ -57,7 +57,7 @@
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 7rem;
   }
 
   footer h2 {
@@ -79,6 +79,10 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .abningstider span {
+    padding: 0 10px;
+  }
   li {
     list-style-type: none;
   }
@@ -95,6 +99,7 @@
     color: var(--offBlack);
     font-weight: normal;
     text-transform: none;
+    text-decoration: underline var(--lyserRoed400) 2px;
   }
 
   .map {
@@ -109,6 +114,10 @@
   .responsive-iframe {
     aspect-ratio: 1/1;
     width: 100%;
+  }
+
+  .underline {
+    text-decoration: underline var(--lyserRoed400) 2px;
   }
 
   @media (min-width: 800px) {
