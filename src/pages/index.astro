@@ -39,6 +39,23 @@ import Layout from "../componets/Layout.astro";
     </div>
   </div>
 
+  <div class="sissel">
+    <div class="sissel-slide">
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+    </div>
+    <div class="sissel-slide">
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+    </div>
+  </div>
+
   <blockquote
     class="instagram-media"
     data-instgrm-captioned
@@ -120,10 +137,44 @@ import Layout from "../componets/Layout.astro";
     width: auto;
     height: 80px;
   }
+
   /***** Desktop *****/
   @media (min-width: 800px) {
     .toej-slide img {
       height: 200px;
+    }
+  }
+
+  /***************************** Sissel Edelbo infinite carousel  ******************************/
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .sissel {
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--groen200);
+  }
+
+  .sissel-slide {
+    display: inline-block;
+    animation: 45s slide infinite linear;
+  }
+
+  .sissel-slide img {
+    width: auto;
+    height: 22px;
+  }
+  /***** Desktop *****/
+  @media (min-width: 800px) {
+    .sissel-slide img {
+      height: 32px;
     }
   }
 </style>
