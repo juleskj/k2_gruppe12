@@ -1,0 +1,62 @@
+<article>
+  <div class="produkttekst">
+    <img class="produktbillede" src="/public/img/placeholder.png" alt="placeholder" />
+
+    <p class="nyhed">Nyhed</p>
+    <p class="udsolgt">Udsolgt</p>
+  </div>
+  <div class="card">
+    <div class="produktinfo">
+      <h1 class="produktnavn card_h1">Mærke</h1>
+      <p class="beskrivelse">Beskrivelse</p>
+    </div>
+    <div class="pris">
+      <p class="before">Før pris</p>
+      <p class="newprice">Ny pris</p>
+    </div>
+    <a href="/kurv"> <img class="kurv" src="/public/img/placeholder.png" alt="placeholder" /></a>
+  </div>
+</article>
+
+<style>
+  .produkttekst {
+    position: relative;
+  }
+  .udsolgt {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+  }
+  .nyhed {
+    position: absolute;
+    top: 0%;
+  }
+  .produktnavn {
+  }
+  .produktbillede {
+    width: 250px;
+    height: 250px;
+  }
+  .kurv {
+    width: 35px;
+    height: 30px;
+    right: 0%;
+    bottom: 5%;
+    position: absolute;
+  }
+  .produktinfo h2,
+  .produktinfo p {
+    padding: 20px 0;
+  }
+  .card {
+    position: relative;
+  }
+  article {
+    position: relative;
+    width: 250px;
+    height: 425px;
+  }
+  .before {
+    text-decoration: line-through red 2px;
+  }
+</style>
