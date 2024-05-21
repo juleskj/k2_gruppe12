@@ -1,9 +1,33 @@
 ---
 import Layout from "../componets/Layout.astro";
+import Card from "../componets/Card.astro";
+import Sko_card from "../componets/Sko_card.astro";
 ---
 
 <Layout titel="Listeveiw">
-  <h1>LISTEVEIW</h1>
+  <section class="grid_1_1_1_1">
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Card />
+    <Sko_card />
+    <Card />
+  </section>
 </Layout>
+<style>
+  .grid_1_1_1_1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 
-<style></style>
+  /* nth child betyder at vi tager barnet inde i secktion nummerer er i paranteset */
+</style>
