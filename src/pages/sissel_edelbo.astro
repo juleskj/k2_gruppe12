@@ -4,6 +4,218 @@ import Layout from "../componets/Layout.astro";
 
 <Layout titel="Sissel Edelbo">
   <h1>SISSEL EDELBO</h1>
+  <div class="om_kjoler">
+    <div class="col">
+      <h2>Æstetiske Bæredygtighed i Tøjkunst</h2>
+      <p>
+        Sissel Eddelbo's design er kendetegnet ved sit unikke og innovative brug
+        af genbrugsmaterialer.
+      </p>
+      <p>
+        Hendes tøjkollektioner kombinerer æstetik og bæredygtighed på en
+        harmonisk måde, der appellerer til moderne forbrugere med en bevidsthed
+        om miljøet.
+      </p>
+      <p>
+        Da hver kjole er en unik skabelse, er de eksklusivt tilgængelige i vores
+        fysiske butik.
+      </p>
+    </div>
+    <img class="order" src="/public/img/placeholder.png" alt="placeholder" />
+    <img src="/public/img/placeholder.png" alt="placeholder" />
+    <img src="/public/img/placeholder.png" alt="placeholder" />
+    <img src="/public/img/placeholder.png" alt="placeholder" />
+    <div class="queute">
+      <p>
+        “Hos SISSEL EDELBO er socialt ansvar ikke blot en del af vores
+        forretning; det er kernen i alt, hvad vi gør.”
+      </p>
+    </div>
+  </div>
+  <div class="om_sissel">
+    <h2>Om SISSEL EDELBO</h2>
+    <div class="col">
+      <p>
+        Sissel Edelbo er grundlagt af de danske iværksættere Jeanne Sissel
+        Thomsen og Chris Elmengaard samt designeren bag det bæredygtige
+        tøjmærke, Eddelbo. Deres brand er dedikeret til at skabe miljøvenligt
+        tøj ved at genbruge overskydende materialer fra indiske landsbyer og
+        hjem. Med en mission om at mindske tekstilaffaldet og fremme en mere
+        bæredygtig modeindustri, arbejder Eddelbo målrettet på at anvende
+        ressourcer på en ansvarlig måde.
+      </p>
+    </div>
+    <div class="col">
+      <p>
+        Sissel Edelbo er en anerkendt design brance, hvis design er synonymt med
+        ansvarlig mode. Hendes signaturstil er præget af et unikt og innovativt
+        brug af genbrugsmaterialer, der giver hendes tøjkollektioner et særligt
+        præg af bæredygtighed og kreativitet. Deres designs formår at forene
+        æstetik og miljøbevidsthed på en harmonisk måde og tiltaler derfor
+        moderne forbrugere, der ønsker at klæde sig med stil og samvittighed.
+      </p>
+    </div>
+  </div>
+
+  <div class="kjoler_i_butik">
+    <img
+      class="kjole_img"
+      src="/public/img/placeholder.png"
+      alt="placeholder"
+    />
+    <img
+      class="kjole_img"
+      src="/public/img/placeholder.png"
+      alt="placeholder"
+    />
+    <img
+      class="kjole_img"
+      src="/public/img/placeholder.png"
+      alt="placeholder"
+    />
+    <img
+      class="kjole_img"
+      src="/public/img/placeholder.png"
+      alt="placeholder"
+    />
+    <div class="billede_tekst">
+      <img
+        class="tekst_img"
+        src="/public/img/placeholder.png"
+        alt="placeholder"
+      />
+      <div class="col">
+        <h2>Stærke Bånd og Bæredygtig Produktion: En Glædelig Genforening"</h2>
+        <p>
+          Det er altid en glæde at genforenes med de mennesker, som vi gennem
+          årene har opbygget stærke og nære relationer til. Her får vi mulighed
+          for at fordybe os i produktionen, holde os opdaterede om
+          produktionsstatus og sikre, at alle involverede arbejder i et sundt og
+          sikkert miljø – noget, der er af allerstørste betydning for os.
+        </p>
+      </div>
+    </div>
+    <img
+      class="kjole_img"
+      src="/public/img/placeholder.png"
+      alt="placeholder"
+    />
+    <img
+      class="kjole_img"
+      src="/public/img/placeholder.png"
+      alt="placeholder"
+    />
+    <img
+      class="kjole_img"
+      src="/public/img/placeholder.png"
+      alt="placeholder"
+    />
+    <img
+      class="kjole_img"
+      src="/public/img/placeholder.png"
+      alt="placeholder"
+    />
+    <img
+      class="kjole_img"
+      src="/public/img/placeholder.png"
+      alt="placeholder"
+    />
+    <img
+      class="kjole_img"
+      src="/public/img/placeholder.png"
+      alt="placeholder"
+    />
+  </div>
 </Layout>
 
-<style></style>
+<style>
+  h2 {
+    padding: 15px 0;
+  }
+  p,
+  h2 {
+    color: var(--offWhite);
+  }
+  img,
+  .om_kjoler div {
+    margin-top: 20px;
+  }
+  .om_kjoler .col,
+  .om_sissel {
+    background-color: var(--gul500);
+  }
+
+  .queute,
+  .kjoler_i_butik .col {
+    background-color: var(--lyserRoed600);
+  }
+  .om_kjoler {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+  }
+
+  .om_kjoler .order {
+    order: -1;
+  }
+
+  .kjoler_i_butik {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .kjole_img {
+    width: 150px;
+    flex: 1 1 auto;
+  }
+
+  .om_kjoler div,
+  .om_sissel,
+  .kjoler_i_butik .col {
+    padding: 50px 20px;
+  }
+
+  .om_sissel {
+    margin: 40px 0;
+  }
+  .om_sissel p {
+    padding: 20px 0;
+  }
+
+  @media (min-width: 800px) {
+    .kjoler_i_butik {
+      gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    .billede_tekst {
+      grid-area: 2 / 1 / 4 /4;
+    }
+    .billede_tekst img {
+      margin-top: 0;
+    }
+    .kjole_img {
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+      align-self: center;
+    }
+
+    .om_kjoler {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .om_kjoler .order {
+      order: 2;
+    }
+    .om_kjoler img {
+      grid-row: span 2;
+      height: 100%;
+    }
+    .queute {
+      order: 5;
+    }
+  }
+</style>
