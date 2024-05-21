@@ -3,7 +3,7 @@ import Layout from "../componets/Layout.astro";
 ---
 
 <Layout titel="Kontakt">
-  <div class="grid">
+  <div class="flex">
     <div class="abningstider">
       <h1 class="aabningstider_h1">Åbningstider</h1>
       <div class="aabningstider_ul">
@@ -28,7 +28,7 @@ import Layout from "../componets/Layout.astro";
       </div>
     </div>
 
-    <div class="map">
+    <div>
       <iframe
         class="responsive-iframe"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.3664825516435!2d12.501878976758745!3d55.769506590704616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46524f2d0e6d4b0b%3A0xeb730b552c04fa14!2sK2!5e0!3m2!1sen!2sdk!4v1715776446123!5m2!1sen!2sdk"
@@ -81,19 +81,13 @@ import Layout from "../componets/Layout.astro";
 
   /*Desktop*/
   @media (min-width: 800px) {
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 50px;
-    }
-
-    .map {
-      grid-column: 3/4;
-      padding-top: 65px;
+    .flex {
+      display: flex;
+      justify-content: space-between;
     }
 
     iframe {
-      width: 700px;
+      width: 800px;
       height: 300px;
     }
   }
@@ -113,12 +107,6 @@ import Layout from "../componets/Layout.astro";
     place-items: center;
     position: relative;
   }
-
-  /*img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }*/
 
   .tekstbox {
     position: absolute;
@@ -202,7 +190,7 @@ import Layout from "../componets/Layout.astro";
     padding-bottom: 20px;
   }
 
-  .grid {
+  .flex {
     padding-bottom: 50px;
   }
   .luft {
