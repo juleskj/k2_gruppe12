@@ -1,6 +1,7 @@
 ---
 import Layout from "../componets/Layout.astro";
 import Buttons from "../componets/Buttons.astro";
+import Card from "../componets/Card.astro";
 ---
 
 <Layout titel="Forside">
@@ -60,9 +61,35 @@ import Buttons from "../componets/Buttons.astro";
       </div>
     </a>
   </div>
+
+  <div class="popular">
+    <h1>Se de mest populære sko</h1>
+    <section class="grid_popular">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </section>
+    <div class="popular_button">
+      <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko </a></Buttons>
+    </div>
+  </div>
+
   <div class="instagram">
     <h2>Følg K2 på Instagram</h2>
     <div class="line"></div>
+    <a href="https://www.instagram.com/k2shoesandbags?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+      <div class="grid_istagram">
+        <img src="/public/img/instagram_1.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_2.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_7.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_4.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_5.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_6.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_3.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_8.webp" alt="k2-Instagram" />
+      </div>
+    </a>
   </div>
   <div class="billede_med_tekst">
     <div class="background-image">
@@ -154,6 +181,30 @@ import Buttons from "../componets/Buttons.astro";
     }
   }
 
+  /***************************** Populære sko ******************************/
+
+  .popular {
+    padding-top: 50px;
+  }
+
+  .grid_popular {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+    padding: 50px 0;
+  }
+
+  /***** Desktop *****/
+  @media (min-width: 800px) {
+    .grid_popular {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+
+  .popular_button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   /***************************** Instagram ******************************/
   .instagram {
     padding: 50px 0;
@@ -169,6 +220,13 @@ import Buttons from "../componets/Buttons.astro";
     height: 2px;
     background-color: var(--lyserRoed600);
     margin: 0 auto;
+  }
+
+  .grid_istagram {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding-top: 50px;
   }
 
   /***************************** Billide med tekstbox  ******************************/
