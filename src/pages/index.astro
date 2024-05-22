@@ -60,9 +60,23 @@ import Buttons from "../componets/Buttons.astro";
       </div>
     </a>
   </div>
+  <h1>Se de mest populære sko</h1>
+
   <div class="instagram">
     <h2>Følg K2 på Instagram</h2>
     <div class="line"></div>
+    <a href="https://www.instagram.com/k2shoesandbags?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+      <div class="grid_istagram">
+        <img src="/public/img/instagram_1.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_2.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_7.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_4.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_5.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_6.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_3.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_8.webp" alt="k2-Instagram" />
+      </div>
+    </a>
   </div>
   <div class="billede_med_tekst">
     <div class="background-image">
@@ -169,6 +183,13 @@ import Buttons from "../componets/Buttons.astro";
     height: 2px;
     background-color: var(--lyserRoed600);
     margin: 0 auto;
+  }
+
+  .grid_istagram {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding-top: 50px;
   }
 
   /***************************** Billide med tekstbox  ******************************/
