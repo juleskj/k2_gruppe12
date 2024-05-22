@@ -62,27 +62,29 @@ import Card from "../componets/Card.astro";
     </a>
   </div>
 
-  <div class="billede_med_tekst">
-    <img src="/public/img/k2.webp" alt="K2" />
-    <div class="tekst_over_billede">
-      <h1>K2</h1>
-      <p>Velkommen til K2, hvor kvalitet og elegance går hånd i hånd. Vores sko er håndplukket fra de bedste designere i Italien, Spanien og Danmark, mens vores kjoler er skabt af Sissel Edelbo og lavet af reststoffer, som garenterer en bæredygtig og unik stil til enhver kvinde.</p>
-      <p>Lad dig forføre af vores udvalg og oplev en verden af stil og kvalitet.</p>
+  <div class="grid_kategori_index">
+    <div class="billede_med_tekst">
+      <img src="/public/img/k2.webp" alt="K2" />
+      <div class="tekst_over_billede">
+        <h1>K2</h1>
+        <p>Velkommen til K2, hvor kvalitet og elegance går hånd i hånd. Vores sko er håndplukket fra de bedste designere i Italien, Spanien og Danmark, mens vores kjoler er skabt af Sissel Edelbo og lavet af reststoffer, som garenterer en bæredygtig og unik stil til enhver kvinde.</p>
+        <p>Lad dig forføre af vores udvalg og oplev en verden af stil og kvalitet.</p>
+      </div>
     </div>
-  </div>
-  <div class="grid_kategori">
-    <div>
-      <h2>KLAR TIL SOMMEREN?</h2>
-      <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko</a></Buttons>
+    <div class="grid_kategori">
+      <div>
+        <h2>KLAR TIL SOMMEREN?</h2>
+        <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko</a></Buttons>
+      </div>
+      <img src="/public/img/sko.webp" alt="Sko" />
     </div>
-    <img src="/public/img/sko.webp" alt="Sko" />
-  </div>
-  <div class="grid_kategori">
-    <div>
-      <h2>KLAR TIL FEST?</h2>
-      <Buttons variant="primary"><a class="button" href="/sissel_edelbo">Se mere tøj</a></Buttons>
+    <div class="grid_kategori">
+      <div>
+        <h2>KLAR TIL FEST?</h2>
+        <Buttons variant="primary"><a class="button" href="/sissel_edelbo">Se mere tøj</a></Buttons>
+      </div>
+      <img src="/public/img/toej.webp" alt="Tøj" />
     </div>
-    <img src="/public/img/toej.webp" alt="Tøj" />
   </div>
 
   <div class="popular">
@@ -206,6 +208,12 @@ import Card from "../componets/Card.astro";
 
   /***************************** Kategori ******************************/
 
+  .grid_kategori_index {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 50px;
+  }
+
   .billede_med_tekst {
     display: grid;
     place-items: center;
@@ -224,6 +232,13 @@ import Card from "../componets/Card.astro";
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+  }
+
+  .tekst_over_billede,
+  h1,
+  p {
+    color: var(--offWhite);
+    padding: 10px 0;
   }
 
   .grid_kategori {
