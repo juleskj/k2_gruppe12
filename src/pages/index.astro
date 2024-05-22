@@ -62,6 +62,29 @@ import Card from "../componets/Card.astro";
     </a>
   </div>
 
+  <div class="billede_med_tekst">
+    <img src="/public/img/k2.webp" alt="K2" />
+    <div class="tekst_over_billede">
+      <h1>K2</h1>
+      <p>Velkommen til K2, hvor kvalitet og elegance går hånd i hånd. Vores sko er håndplukket fra de bedste designere i Italien, Spanien og Danmark, mens vores kjoler er skabt af Sissel Edelbo og lavet af reststoffer, som garenterer en bæredygtig og unik stil til enhver kvinde.</p>
+      <p>Lad dig forføre af vores udvalg og oplev en verden af stil og kvalitet.</p>
+    </div>
+  </div>
+  <div class="grid_kategori">
+    <div>
+      <h2>KLAR TIL SOMMEREN?</h2>
+      <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko</a></Buttons>
+    </div>
+    <img src="/public/img/sko.webp" alt="Sko" />
+  </div>
+  <div class="grid_kategori">
+    <div>
+      <h2>KLAR TIL FEST?</h2>
+      <Buttons variant="primary"><a class="button" href="/sissel_edelbo">Se mere tøj</a></Buttons>
+    </div>
+    <img src="/public/img/toej.webp" alt="Tøj" />
+  </div>
+
   <div class="popular">
     <h1>Se de mest populære sko</h1>
     <section class="grid_popular">
@@ -80,14 +103,14 @@ import Card from "../componets/Card.astro";
     <div class="line"></div>
     <a href="https://www.instagram.com/k2shoesandbags?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
       <div class="grid_istagram">
+        <img src="/public/img/instagram_8.webp" alt="k2-Instagram" />
         <img src="/public/img/instagram_1.webp" alt="k2-Instagram" />
-        <img src="/public/img/instagram_2.webp" alt="k2-Instagram" />
         <img src="/public/img/instagram_7.webp" alt="k2-Instagram" />
         <img src="/public/img/instagram_4.webp" alt="k2-Instagram" />
+        <img src="/public/img/instagram_2.webp" alt="k2-Instagram" />
         <img src="/public/img/instagram_5.webp" alt="k2-Instagram" />
         <img src="/public/img/instagram_6.webp" alt="k2-Instagram" />
         <img src="/public/img/instagram_3.webp" alt="k2-Instagram" />
-        <img src="/public/img/instagram_8.webp" alt="k2-Instagram" />
       </div>
     </a>
   </div>
@@ -181,6 +204,34 @@ import Card from "../componets/Card.astro";
     }
   }
 
+  /***************************** Kategori ******************************/
+
+  .billede_med_tekst {
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    /*display: block;*/
+  }
+
+  .tekst_over_billede {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  .grid_kategori {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--brun50);
+  }
+
   /***************************** Populære sko ******************************/
 
   .popular {
@@ -237,12 +288,6 @@ import Card from "../componets/Card.astro";
     background-size: cover;
     width: 100%;
     height: 800px;
-  }
-
-  .billede_med_tekst {
-    display: grid;
-    place-items: center;
-    position: relative;
   }
 
   .tekstbox {
