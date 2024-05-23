@@ -3,7 +3,75 @@ import Layout from "../componets/Layout.astro";
 ---
 
 <Layout titel="Kurv">
-  <h1>KURV</h1>
+  <div class="produkt_info order">
+    <h2>placeholder</h2>
+    <div class="card">
+      <img src="/public/img/placeholder.png" alt="placeholder" />
+      <div class="info">
+        <p class="str">str: 37</p>
+        <p class="before_pris">Før: 1000Dkk</p>
+        <p class="new_pris">800DKK</p>
+      </div>
+    </div>
+    <form class="rabat_form">
+      <input
+        type="text"
+        id="rabat_kode"
+        name="rabat_kode"
+        placeholder="Indsæt rabat kode"
+      />
+
+      <input type="submit" value="Indløs" />
+    </form>
+    <div class="udgifter">
+      <div class="udgifter_info">
+        <p>Rabat</p>
+        <p>Subtotal</p>
+        <p>Levering</p>
+        <p><strong>I Alt</strong></p>
+      </div>
+      <div class="udgifter_tal">
+        <p class="rabat">200 DKK</p>
+        <p class="subtotal">800 DKK</p>
+        <p>Gratis</p>
+        <p class="i_alt"><strong>600 DKK</strong></p>
+      </div>
+    </div>
+  </div>
 </Layout>
 
-<style></style>
+<style>
+  /* her bliver produkt informationen stylet */
+  .produkt_info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .card {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .card img,
+  .info {
+    width: 100px;
+    flex: 1 1 auto;
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: end;
+  }
+  .new_pris {
+    grid-area: 2/ 2 / 3 /3;
+  }
+
+  .udgifter {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+</style>

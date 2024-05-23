@@ -66,24 +66,26 @@ import Card from "../componets/Card.astro";
     <div class="billede_med_tekst">
       <div class="background-image-k2"></div>
       <div class="tekst_over_billede">
-        <h1 class="hvid">K2</h1>
+        <h1 class="hvid h1_k2">K2</h1>
         <p class="hvid">Velkommen til K2, hvor kvalitet og elegance går hånd i hånd. Vores sko er håndplukket fra de bedste designere i Italien, Spanien og Danmark, mens vores kjoler er skabt af Sissel Edelbo og lavet af reststoffer, som garenterer en bæredygtig og unik stil til enhver kvinde.</p>
         <p class="hvid">Lad dig forføre af vores udvalg og oplev en verden af stil og kvalitet.</p>
       </div>
     </div>
-    <div class="grid_kategori">
-      <div class="midten">
-        <h2 class="luft_klar">KLAR TIL SOMMEREN?</h2>
-        <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko</a></Buttons>
+    <div class="grid_kategori_venstre">
+      <div class="grid_kategori">
+        <div class="midten">
+          <h2 class="luft_klar">KLAR TIL SOMMEREN?</h2>
+          <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko</a></Buttons>
+        </div>
+        <img src="/public/img/sko.webp" alt="Sko" />
       </div>
-      <img src="/public/img/sko.webp" alt="Sko" />
-    </div>
-    <div class="grid_kategori">
-      <div class="midten">
-        <h2 class="luft_klar">KLAR TIL FEST?</h2>
-        <Buttons variant="primary"><a class="button" href="/sissel_edelbo">Se mere tøj</a></Buttons>
+      <div class="grid_kategori">
+        <div class="midten">
+          <h2 class="luft_klar">KLAR TIL FEST?</h2>
+          <Buttons variant="primary"><a class="button" href="/sissel_edelbo">Se mere tøj</a></Buttons>
+        </div>
+        <img src="/public/img/toej.webp" alt="Tøj" />
       </div>
-      <img src="/public/img/toej.webp" alt="Tøj" />
     </div>
   </div>
 
@@ -214,6 +216,7 @@ import Card from "../componets/Card.astro";
     background-size: cover;
     width: 100%;
     aspect-ratio: 8/14;
+    filter: brightness(60%);
   }
   .billede_med_tekst {
     display: grid;
@@ -262,16 +265,25 @@ import Card from "../componets/Card.astro";
     padding: 20px 0;
   }
 
+  .h1_k2 {
+    text-align: center;
+  }
+
   /***** Desktop *****/
   @media (min-width: 800px) {
     .background-image-k2 {
       background-image: url(/public/img/k2.webp);
       aspect-ratio: 8/8;
     }
+
     .grid_kategori_index {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding-top: 50px;
+    }
+
+    .grid_kategori {
+      grid-column: 2 / 3;
     }
   }
 
