@@ -1,42 +1,39 @@
 ---
 import Layout from "../componets/Layout.astro";
+import Buttons from "../componets/Buttons.astro";
 ---
 
 <Layout titel="Kurv">
-  <div class="produkt_info order">
-    <h2>placeholder</h2>
-    <div class="card">
-      <img src="/public/img/placeholder.png" alt="placeholder" />
-      <div class="info">
-        <p class="str">str: 37</p>
-        <p class="before_pris">Før: 1000Dkk</p>
-        <p class="new_pris">800DKK</p>
+  <div class="produkt_info">
+    <h2>Din kurv</h2>
+    <div class="desktop_row">
+      <div class="card">
+        <img src="/public/img/placeholder.png" alt="placeholder" />
+        <div class="info">
+          <p class="str">str: 37</p>
+          <p class="before_pris">Før: 1000Dkk</p>
+          <p class="new_pris">800DKK</p>
+        </div>
       </div>
-    </div>
-    <form class="rabat_form">
-      <input
-        type="text"
-        id="rabat_kode"
-        name="rabat_kode"
-        placeholder="Indsæt rabat kode"
-      />
 
-      <input type="submit" value="Indløs" />
-    </form>
-    <div class="udgifter">
-      <div class="udgifter_info">
-        <p>Rabat</p>
-        <p>Subtotal</p>
-        <p>Levering</p>
-        <p><strong>I Alt</strong></p>
-      </div>
-      <div class="udgifter_tal">
-        <p class="rabat">200 DKK</p>
-        <p class="subtotal">800 DKK</p>
-        <p>Gratis</p>
-        <p class="i_alt"><strong>600 DKK</strong></p>
+      <div class="udgifter">
+        <div class="udgifter_info">
+          <p>Rabat</p>
+          <p>Subtotal</p>
+
+          <p><strong>I Alt</strong></p>
+        </div>
+        <div class="udgifter_tal">
+          <p class="rabat">200 DKK</p>
+          <p class="subtotal">800 DKK</p>
+
+          <p class="i_alt"><strong>600 DKK</strong></p>
+        </div>
       </div>
     </div>
+    <Buttons variant="primary"
+      ><a href="/betalingsformat">Går til betaling</a></Buttons
+    >
   </div>
 </Layout>
 
@@ -46,6 +43,7 @@ import Layout from "../componets/Layout.astro";
     display: flex;
     flex-direction: column;
     gap: 40px;
+    padding-bottom: 100px;
   }
   .card {
     display: flex;
@@ -73,5 +71,24 @@ import Layout from "../componets/Layout.astro";
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+  }
+
+  @media (min-width: 800px) {
+    .desktop_row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding-bottom: 100px;
+    }
+
+    .udgifter,
+    .card {
+      gap: 100px;
+    }
+
+    .card img {
+      height: 100%;
+      width: 250px;
+    }
   }
 </style>
