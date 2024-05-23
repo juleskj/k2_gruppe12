@@ -4,9 +4,9 @@ console.log(data);
 ---
 
 <article>
-  <!-- <div class="produkt_card">
+  <div class="produkt_card">
     <div class="produkttekst">
-      <img class="produktbillede" src="/public/img/placeholder.png" alt="placeholder" />
+      <img class="produktbillede" src={"/public/img/listeveiw/" + data.produktbillede} alt={"billede af " + data.beskrivelse} />
 
       <p class="nyhed">{data.nyhed}</p>
       <p class="udsolgt">{data.udsalg}</p>
@@ -22,7 +22,7 @@ console.log(data);
       </div>
       <a href="/kurv"> <img class="kurv" src="/public/img/placeholder.png" alt="placeholder" /></a>
     </div>
-  </div> -->
+  </div>
 </article>
 
 <style>

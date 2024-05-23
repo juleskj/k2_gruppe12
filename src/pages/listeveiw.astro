@@ -2,6 +2,7 @@
 import Layout from "../componets/Layout.astro";
 import Card from "../componets/Card.astro";
 import Sko_card from "../componets/Sko_card.astro";
+import Butik_card from "../componets/Butik_card.astro";
 
 const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/K2", {
   method: "GET",
@@ -21,13 +22,16 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenF
         return <Card data={sko} />;
       })
     }
+    <Sko_card />
+    <Butik_card />
   </section>
-</Layout>
-<style>
-  .grid_1_1_1_1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
 
-  /* nth child betyder at vi tager barnet inde i secktion nummerer er i paranteset */
-</style>
+  <style>
+    .grid_1_1_1_1 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    /* nth child betyder at vi tager barnet inde i secktion nummerer er i paranteset */
+  </style>
+</Layout>
