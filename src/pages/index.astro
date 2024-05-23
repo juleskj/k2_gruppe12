@@ -5,7 +5,8 @@ import Card from "../componets/Card.astro";
 ---
 
 <Layout titel="Forside">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/nAjR0Oj0J8E?si=O2tECBT2TAK97meS&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <video controls autoplay loop src="/public/stop_mostion.mp4"></video>
+
   <div class="toej">
     <a href="/sissel_edelbo">
       <div class="toej-slide">
@@ -118,7 +119,7 @@ import Card from "../componets/Card.astro";
       </div>
     </a>
   </div>
-  <div class="billede_med_tekst">
+  <div class="billede_med_tekst billede_luft">
     <div class="background-image">
       <div class="tekstbox">
         <h2 class="luft_om_h2">Om K2</h2>
@@ -134,10 +135,10 @@ import Card from "../componets/Card.astro";
 
 <style>
   /***************************** Video ******************************/
-  iframe {
+  video {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9;
+    display: block;
   }
   /***************************** Tøj infinite carousel  ******************************/
 
@@ -269,6 +270,12 @@ import Card from "../componets/Card.astro";
     text-align: center;
   }
 
+  .grid_kategori_index {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 150px 0;
+  }
+
   /***** Desktop *****/
   @media (min-width: 800px) {
     .background-image-k2 {
@@ -279,7 +286,6 @@ import Card from "../componets/Card.astro";
     .grid_kategori_index {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      padding-top: 50px;
     }
 
     .grid_kategori {
@@ -288,10 +294,6 @@ import Card from "../componets/Card.astro";
   }
 
   /***************************** Populære sko ******************************/
-
-  .popular {
-    padding-top: 50px;
-  }
 
   .grid_popular {
     padding: 50px 0;
@@ -313,7 +315,7 @@ import Card from "../componets/Card.astro";
 
   /***************************** Instagram ******************************/
   .instagram {
-    padding: 50px 0;
+    padding: 150px 0;
   }
 
   .instagram h2 {
@@ -343,7 +345,7 @@ import Card from "../componets/Card.astro";
     }
   }
 
-  /***************************** Billide med tekstbox  ******************************/
+  /***************************** Billide med tekstbox - Om K2 ******************************/
 
   .background-image {
     background-image: url(/public/img/kontakt_placeholder_2.png);
@@ -372,6 +374,10 @@ import Card from "../componets/Card.astro";
   }
   .luft_om_h2 {
     padding-bottom: 25px;
+  }
+
+  .billede_luft {
+    margin-bottom: 100px;
   }
 
   /*Desktop*/
