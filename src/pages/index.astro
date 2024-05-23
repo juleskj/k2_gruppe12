@@ -64,23 +64,23 @@ import Card from "../componets/Card.astro";
 
   <div class="grid_kategori_index">
     <div class="billede_med_tekst">
-      <img src="/public/img/k2.webp" alt="K2" />
+      <div class="background-image-k2"></div>
       <div class="tekst_over_billede">
-        <h1>K2</h1>
-        <p>Velkommen til K2, hvor kvalitet og elegance går hånd i hånd. Vores sko er håndplukket fra de bedste designere i Italien, Spanien og Danmark, mens vores kjoler er skabt af Sissel Edelbo og lavet af reststoffer, som garenterer en bæredygtig og unik stil til enhver kvinde.</p>
-        <p>Lad dig forføre af vores udvalg og oplev en verden af stil og kvalitet.</p>
+        <h1 class="hvid">K2</h1>
+        <p class="hvid">Velkommen til K2, hvor kvalitet og elegance går hånd i hånd. Vores sko er håndplukket fra de bedste designere i Italien, Spanien og Danmark, mens vores kjoler er skabt af Sissel Edelbo og lavet af reststoffer, som garenterer en bæredygtig og unik stil til enhver kvinde.</p>
+        <p class="hvid">Lad dig forføre af vores udvalg og oplev en verden af stil og kvalitet.</p>
       </div>
     </div>
     <div class="grid_kategori">
-      <div>
-        <h2>KLAR TIL SOMMEREN?</h2>
+      <div class="midten">
+        <h2 class="luft_klar">KLAR TIL SOMMEREN?</h2>
         <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko</a></Buttons>
       </div>
       <img src="/public/img/sko.webp" alt="Sko" />
     </div>
     <div class="grid_kategori">
-      <div>
-        <h2>KLAR TIL FEST?</h2>
+      <div class="midten">
+        <h2 class="luft_klar">KLAR TIL FEST?</h2>
         <Buttons variant="primary"><a class="button" href="/sissel_edelbo">Se mere tøj</a></Buttons>
       </div>
       <img src="/public/img/toej.webp" alt="Tøj" />
@@ -208,12 +208,13 @@ import Card from "../componets/Card.astro";
 
   /***************************** Kategori ******************************/
 
-  .grid_kategori_index {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding-top: 50px;
+  .background-image-k2 {
+    background-image: url(/public/img/k2_2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: 8/14;
   }
-
   .billede_med_tekst {
     display: grid;
     place-items: center;
@@ -234,9 +235,11 @@ import Card from "../componets/Card.astro";
     z-index: 1;
   }
 
-  .tekst_over_billede,
-  h1,
-  p {
+  .tekst_over_billede p {
+    width: 280px;
+  }
+
+  .hvid {
     color: var(--offWhite);
     padding: 10px 0;
   }
@@ -247,6 +250,31 @@ import Card from "../componets/Card.astro";
     background-color: var(--brun50);
   }
 
+  .midten {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .luft_klar {
+    padding: 20px 0;
+  }
+
+  /***** Desktop *****/
+  @media (min-width: 800px) {
+    .background-image-k2 {
+      background-image: url(/public/img/k2.webp);
+      aspect-ratio: 8/8;
+    }
+    .grid_kategori_index {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 50px;
+    }
+  }
+
   /***************************** Populære sko ******************************/
 
   .popular {
@@ -254,9 +282,9 @@ import Card from "../componets/Card.astro";
   }
 
   .grid_popular {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
     padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 
   /***** Desktop *****/
@@ -290,9 +318,17 @@ import Card from "../componets/Card.astro";
 
   .grid_istagram {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     padding-top: 50px;
+  }
+
+  /***** Desktop *****/
+  @media (min-width: 800px) {
+    .grid_istagram {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   /***************************** Billide med tekstbox  ******************************/
