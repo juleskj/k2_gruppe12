@@ -3,7 +3,14 @@
 const { title } = Astro.props;
 import Header from "../componets/Header.astro";
 import Footer from "../componets/Footer.astro";
-const { hero_img, hero_tekst, hero_undertekst, hasImg = false } = Astro.props;
+const {
+  hero_img,
+  hero_tekst,
+  hero_undertekst,
+  hasImg = false,
+  hasTekst = false,
+  hasUnderTekst = false,
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -21,8 +28,8 @@ const { hero_img, hero_tekst, hero_undertekst, hasImg = false } = Astro.props;
     <div class="billede_med_tekst">
       {hasImg && <img src={hero_img} alt="Hero image" class="hero_img" />}
       <div class="tekst">
-        <h1 class="hero_tekst">{hero_tekst}</h1>
-        <h2 class="header_undertekst">{hero_undertekst}</h2>
+        {hasTekst && <h1 class="hero_tekst">{hero_tekst}</h1>}
+        {hasUnderTekst && <h2 class="header_undertekst">{hero_undertekst}</h2>}
       </div>
     </div>
     <main>

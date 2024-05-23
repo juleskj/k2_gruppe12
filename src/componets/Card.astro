@@ -1,24 +1,27 @@
 ---
-
+const { data } = Astro.props;
+console.log(data);
 ---
 
 <article>
-  <div class="produkttekst">
-    <img class="produktbillede" src="/public/img/placeholder.png" alt="placeholder" />
+  <div class="produkt_card">
+    <div class="produkttekst">
+      <img class="produktbillede" src="/public/img/placeholder.png" alt="placeholder" />
 
-    <p class="nyhed">Nyhed</p>
-    <p class="udsolgt">Udsolgt</p>
-  </div>
-  <div class="card">
-    <div class="produktinfo">
-      <h1 class="produktnavn card_h1">Mærke</h1>
-      <p class="beskrivelse">Beskrivelse</p>
+      <p class="nyhed">{data.nyhed}</p>
+      <p class="udsolgt">{data.udsalg}</p>
     </div>
-    <div class="pris">
-      <p class="before">Før pris</p>
-      <p class="newprice">Ny pris</p>
+    <div class="card">
+      <div class="produktinfo">
+        <h1 class="produktnavn card_h1">{data.maerke}</h1>
+        <p class="beskrivelse">{data.beskrivelse}</p>
+      </div>
+      <div class="pris">
+        <p class="before">Før {data.beforepris} dkk</p>
+        <p class="newprice">{data.afterpris} dkk</p>
+      </div>
+      <a href="/kurv"> <img class="kurv" src="/public/img/placeholder.png" alt="placeholder" /></a>
     </div>
-    <a href="/kurv"> <img class="kurv" src="/public/img/placeholder.png" alt="placeholder" /></a>
   </div>
 </article>
 
@@ -56,9 +59,15 @@
     position: relative;
   }
   article {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 250px;
-    height: 425px;
+    height: 100%;
+  }
+
+  .produkt_card {
+    flex-shrink: 1;
   }
   .before {
     text-decoration: line-through red 2px;

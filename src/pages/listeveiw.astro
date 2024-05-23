@@ -2,43 +2,25 @@
 import Layout from "../componets/Layout.astro";
 import Card from "../componets/Card.astro";
 import Sko_card from "../componets/Sko_card.astro";
+
+const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/K2", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
+  },
+}).then((res) => res.json());
+console.log(data);
 ---
 
+<!-- https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/K2
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw -->
 <Layout titel="Listeveiw">
   <section class="grid_1_1_1_1">
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Sko_card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
-    <Sko_card />
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+    {
+      data.map((sko) => {
+        return <Card data={sko} />;
+      })
+    }
   </section>
 </Layout>
 <style>
