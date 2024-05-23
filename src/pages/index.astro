@@ -318,9 +318,17 @@ import Card from "../componets/Card.astro";
 
   .grid_istagram {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 8px;
     padding-top: 50px;
+  }
+
+  /***** Desktop *****/
+  @media (min-width: 800px) {
+    .grid_istagram {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   /***************************** Billide med tekstbox  ******************************/
