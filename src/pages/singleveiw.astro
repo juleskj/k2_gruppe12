@@ -33,10 +33,10 @@ import Card from "../componets/Card.astro";
   <button>Læg i kurv</button>
   <p class="inspi_tekts">Du vil måske også lide</p>
   <div class="inspiration">
-    <Card />
-    <Card />
-    <Card />
-    <Card />
+    <Card class="inspir" />
+    <Card class="inspir" />
+    <Card class="inspir" />
+    <Card class="inspir" />
   </div>
 </Layout>
 
@@ -77,16 +77,20 @@ import Card from "../componets/Card.astro";
   }
 
   .inspiration {
-    height: 200px;
-    width: 200px;
-    object-fit: cover;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: repeat(auto-fill, minmax(800px, 1fr)); */
     gap: 15px;
     padding-top: 30px;
   }
+
+  .inspir {
+    width: 100px;
+  }
   .inspi_tekts {
     padding-top: 50px;
-    padding-left: 140px;
+    text-align: center;
   }
 </style>
