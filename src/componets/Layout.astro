@@ -3,14 +3,7 @@
 const { title } = Astro.props;
 import Header from "../componets/Header.astro";
 import Footer from "../componets/Footer.astro";
-const {
-  hero_img,
-  hero_tekst,
-  hero_undertekst,
-  hasImg = false,
-  hasTekst = false,
-  hasUnderTekst = false,
-} = Astro.props;
+const { hero_img, hero_tekst, hero_undertekst, hero_video, hasImg = false, hasTekst = false, hasUnderTekst = false, hasVideo = false } = Astro.props;
 ---
 
 <html lang="en">
@@ -27,6 +20,7 @@ const {
     <Header />
     <div class="billede_med_tekst">
       {hasImg && <img src={hero_img} alt="Hero image" class="hero_img" />}
+      {hasVideo && <video controls autoplay loop src={hero_video} class="video_img" />}
       <div class="tekst">
         {hasTekst && <h1 class="hero_tekst">{hero_tekst}</h1>}
         {hasUnderTekst && <h2 class="header_undertekst">{hero_undertekst}</h2>}
@@ -47,6 +41,14 @@ const {
     position: relative;
   }
   .hero_img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+
+  .video_img {
     display: block;
     object-fit: cover;
     width: 100%;

@@ -4,9 +4,7 @@ import Buttons from "../componets/Buttons.astro";
 import Card from "../componets/Card.astro";
 ---
 
-<Layout titel="Forside">
-  <video controls autoplay loop src="/public/stop_mostion.mp4"></video>
-
+<Layout titel="Forside" hero_video="/public/stop_mostion.mp4" hasVideo="true">
   <div class="toej">
     <a href="/sissel_edelbo">
       <div class="toej-slide">
@@ -271,7 +269,7 @@ import Card from "../componets/Card.astro";
   }
 
   .grid_kategori_index {
-    padding: 150px 0;
+    padding: 50px 0;
   }
 
   /***** Desktop *****/
@@ -288,6 +286,10 @@ import Card from "../componets/Card.astro";
 
     .grid_kategori {
       grid-column: 2 / 3;
+    }
+
+    .grid_kategori_index {
+      padding: 150px 0;
     }
   }
 
@@ -313,7 +315,7 @@ import Card from "../componets/Card.astro";
 
   /***************************** Instagram ******************************/
   .instagram {
-    padding: 150px 0;
+    padding: 50px 0;
   }
 
   .instagram h2 {
@@ -337,6 +339,9 @@ import Card from "../componets/Card.astro";
 
   /***** Desktop *****/
   @media (min-width: 800px) {
+    .instagram {
+      padding: 150px 0;
+    }
     .grid_istagram {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
