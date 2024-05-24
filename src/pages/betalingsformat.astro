@@ -52,7 +52,9 @@ import Layout from "../componets/Layout.astro";
             value="Levering til døren"
             checked
           />
-          <label for="hjemmelevering">Levering til døren</label><br />
+          <label for="hjemmelevering">Levering til døren</label>
+          <br />
+          <br />
           <input
             class="butik"
             type="radio"
@@ -161,7 +163,7 @@ import Layout from "../componets/Layout.astro";
                 placeholder="Adresse"
                 required
               />
-              <input type="submit" value="find butik" />
+              <input type="submit" value="Find butik" />
             </div>
           </div>
         </fieldset>
@@ -366,6 +368,7 @@ import Layout from "../componets/Layout.astro";
     border: 2px solid var(--lyserRoed600);
     padding: 20px;
     margin-top: 50px;
+    border-radius: 3px;
   }
   legend {
     font-size: 20px;
@@ -378,6 +381,7 @@ import Layout from "../componets/Layout.astro";
     margin: 5px 0;
     padding: 2px 2px;
     border: 2px solid var(--lyserRoed600);
+    border-radius: 3px;
   }
   /* når man er i fæltet i formen */
   input[type="text"]:focus,
@@ -395,6 +399,7 @@ import Layout from "../componets/Layout.astro";
     color: white;
     border: 2px solid var(--lyserRoed600);
     background-color: var(--lyserRoed600);
+    border-radius: 3px;
   }
 
   input[type="submit"]:hover {
