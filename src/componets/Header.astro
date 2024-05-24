@@ -23,7 +23,11 @@
       <li><a href="/sissel_edelbo">Sissel Edelbo</a></li>
       <li><a href="/omk2">Om k2</a></li>
       <li><a href="/kontakt">Kontakt</a></li>
-      <li class="right"><a href="/kurv">Kurv</a></li>
+      <li class="right kurv">
+        <a href="/kurv"
+          ><img src="/public/img/kurv.svg" alt="billede af en kurv" /></a
+        >
+      </li>
     </ul>
   </div>
 </header>
@@ -126,6 +130,14 @@
       content: "";
       top: 8px;
     }
+  }
+  .kurv {
+    width: 30px;
+    height: 25px;
+  }
+
+  .kurv img:hover {
+    border: none;
   }
 
   #menu_toggle {
