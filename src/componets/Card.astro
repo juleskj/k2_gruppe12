@@ -1,4 +1,4 @@
----
+<!-- ---
 const { data } = Astro.props;
 ---
 
@@ -25,72 +25,73 @@ const { data } = Astro.props;
         <p class="newprice">{data.afterpris} DKK</p>
       </div>
     </div>
+    <a href="/kurv"> <img class="kurv" src="/public/img/kurv.svg" alt="placeholder" /></a>
   </article>
-
-  <style>
-    .produkttekst {
-      position: relative;
-    }
-    .udsalg {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-    }
-    .nyhed {
-      position: absolute;
-      top: 0;
-    }
-    .produktnavn {
-      padding-bottom: 20px;
-      padding-top: 20px;
-    }
-    .produktbillede {
-      width: 250px;
-      height: 250px;
-    }
-    .kurv {
-      width: 35px;
-      height: 30px;
-      position: absolute;
-      right: 0;
-      bottom: 1%;
-    }
-
-    .produktinfo p {
-      padding-bottom: 10px;
-    }
-
-    .card {
-      flex-grow: 1;
-    }
-    .pris_container {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      flex-grow: 1;
-      position: relative;
-    }
-    .pris {
-    }
-    article {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      width: 250px;
-      padding-left: 13.5px;
-      margin-bottom: 20px;
-    }
-    .produkt_card {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .before {
-      text-decoration: line-through red 2px;
-    }
-
-    .beskrivelseslist {
-      padding-top: -30px;
-    }
-  </style>
 </a>
+
+<style>
+  .produkttekst {
+    position: relative;
+  }
+  .udsalg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  .nyhed {
+    position: absolute;
+    top: 0;
+  }
+  .produktnavn {
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  .produktbillede {
+    width: 250px;
+    height: 250px;
+  }
+  .kurv {
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 1%;
+  }
+
+  .produktinfo p {
+    padding-bottom: 10px;
+  }
+
+  .card {
+    flex-grow: 1;
+  }
+  .pris_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+    position: relative;
+  }
+  .pris {
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 250px;
+    padding-left: 13.5px;
+    margin-bottom: 20px;
+  }
+  .produkt_card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .before {
+    text-decoration: line-through red 2px;
+  }
+
+  .beskrivelseslist {
+    padding-top: -30px;
+  }
+</style> -->
