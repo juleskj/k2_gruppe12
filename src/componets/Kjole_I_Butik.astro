@@ -1,0 +1,80 @@
+---
+const { sissel_kjole } = Astro.props;
+---
+
+<div class="butik_icon">
+  <span class="icon"></span>
+  <span class="tekst none"><p>Købes kun i butik</p></span>
+  <img class="kjole_img" src={sissel_kjole} alt="billede af sissel kjole" />
+</div>
+
+<script is:inline>
+  document
+    .querySelector(".butik_icon")
+    .addEventListener("mouseover", mouseOverIcon);
+
+  function mouseOverIcon() {
+    console.log("musen er over");
+    document.querySelector("span.tekst").classList.remove("none");
+    document
+      .querySelector(".butik_icon")
+      .addEventListener("mouseout", mouseOutIcon);
+  }
+
+  function mouseOutIcon() {
+    document.querySelector("span.tekst").classList.add("none");
+    console.log("musen er out");
+  }
+</script>
+
+<style>
+  .none {
+    display: none;
+  }
+
+  .butik_icon {
+    flex: 1 1 auto;
+    object-fit: cover;
+  }
+  .butik_icon {
+    position: relative;
+  }
+
+  .butik_icon:hover {
+    filter: brightness(60%);
+  }
+
+  span.icon {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    background-image: url(/public/img/butik_only_hvid.svg);
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+  }
+  span.tekst {
+    position: absolute;
+    top: 45%;
+
+    rotate: 50deg;
+  }
+  span.tekst p {
+    font-size: 30px;
+    color: var(--offWhite);
+  }
+  @media (max-width: 800px) {
+    .butik_icon {
+      width: 150px;
+    }
+  }
+
+  @media (min-wdith: 800px) {
+    .butik_icon {
+      width: 100%;
+      height: 100%;
+      margin-top: 0;
+      align-self: center;
+    }
+  }
+</style>
