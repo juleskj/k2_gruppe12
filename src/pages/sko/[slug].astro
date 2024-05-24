@@ -1,0 +1,134 @@
+---
+import Layout from "../../componets/Layout.astro";
+import Card from "../../componets/Card.astro";
+export async function getStaticPaths() {
+  const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/K2", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
+    },
+  }).then((response) => response.json());
+  return data.map((sko) => {
+    return {
+      params: { slug: sko.slug },
+      props: { myData: sko },
+    };
+  });
+}
+const { myData } = Astro.props;
+console.log(myData);
+---
+
+<Layout titel="Singleveiw">
+  <p class="nyhed">NYHED</p>
+  <div class="desktop">
+    <div class="sko">
+      <div class="enkeltsko">
+        <img class="produktbillede" src={"/public/img/listeveiw/" + myData.produktbillede} alt={"billede af " + myData.beskrivelse} />
+      </div>
+      <div class="ekstrabillede">
+        <img class="produktbillede" src={"/public/img/listeveiw/" + myData.ekstrabillede1} alt={"ekstra billede af " + myData.beskrivelse} />
+        <img class="produktbillede" src={"/public/img/listeveiw/" + myData.ekstrabillede2} alt={"ekstra billede af " + myData.beskrivelse} />
+        <img class="produktbillede" src={"/public/img/listeveiw/" + myData.ekstrabillede3} alt={"ekstra billede af " + myData.beskrivelse} />
+      </div>
+    </div>
+    <div class="produkt_info">
+      <h1 class="produktnavn card_h1">{myData.maerke}</h1>
+
+      <p class="varienat"></p>
+      <p class="maerke">{myData.beskrivelselist}</p>
+      <div class="prik">
+        <div class="color1"><img src="/public/img/prik.png" alt="" /></div>
+        <div class="color2"><img src="/public/img/prik.png" alt="" /></div>
+        <div class="color3"><img src="/public/img/prik.png" alt="" /></div>
+      </div>
+
+      <p class="beskrivelse">{myData.beskrivelse}</p>
+      <p class="before">Før pris</p>
+      <p class="newprice">Ny pris</p>
+      <button>størrelse</button>
+      <button>Læg i kurv</button>
+      <p class="inspi_tekts">Du vil måske også lide</p>
+      <div class="inspiration"></div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .enkeltsko {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }
+  .ekstrabillede {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .ekstrabillede img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    flex: 1 1 auto;
+  }
+  .produktnavn {
+    padding-top: 40px;
+  }
+
+  .color1,
+  .color2,
+  .color3 {
+    border-radius: 900px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+  }
+  .prik {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .inspiration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* grid-template-columns: repeat(auto-fill, minmax(800px, 1fr)); */
+    gap: 15px;
+    padding-top: 30px;
+  }
+
+  .inspir {
+    width: 100px;
+  }
+  .inspi_tekts {
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  @media (min-width: 800px) {
+    .desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 40px;
+    }
+    .sko {
+      min-width: 500px;
+      flex: 1 1 auto;
+    }
+    .produkt_info {
+      min-width: 500px;
+      flex: 1 1 auto;
+    }
+
+    .ekstrabillede img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+</style>
