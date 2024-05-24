@@ -1,5 +1,6 @@
 ---
 import Layout from "../componets/Layout.astro";
+import Kjole_I_Butik from "../componets/Kjole_I_Butik.astro";
 ---
 
 <Layout
@@ -94,30 +95,15 @@ import Layout from "../componets/Layout.astro";
   </div>
 
   <div class="kjoler_i_butik">
-    <img
-      class="kjole_img"
-      src="/public/img/placeholder.png"
-      alt="placeholder"
-    />
-    <img
-      class="kjole_img"
-      src="/public/img/placeholder.png"
-      alt="placeholder"
-    />
-    <img
-      class="kjole_img"
-      src="/public/img/placeholder.png"
-      alt="placeholder"
-    />
-    <img
-      class="kjole_img"
-      src="/public/img/placeholder.png"
-      alt="placeholder"
-    />
+    <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole1.webp" />
+    <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole2.webp" />
+    <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole3.webp" />
+    <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole4.webp" />
+
     <div class="billede_tekst">
       <img
         class="tekst_img"
-        src="/public/img/placeholder.png"
+        src="/public/img/tekst_billede.webp"
         alt="placeholder"
       />
       <div class="col">
@@ -131,36 +117,12 @@ import Layout from "../componets/Layout.astro";
         </p>
       </div>
     </div>
-    <img
-      class="kjole_img"
-      src="/public/img/placeholder.png"
-      alt="placeholder"
-    />
-    <img
-      class="kjole_img"
-      src="/public/img/placeholder.png"
-      alt="placeholder"
-    />
-    <img
-      class="kjole_img"
-      src="/public/img/placeholder.png"
-      alt="placeholder"
-    />
-    <img
-      class="kjole_img"
-      src="/public/img/placeholder.png"
-      alt="placeholder"
-    />
-    <img
-      class="kjole_img"
-      src="/public/img/placeholder.png"
-      alt="placeholder"
-    />
-    <img
-      class="kjole_img"
-      src="/public/img/placeholder.png"
-      alt="placeholder"
-    />
+    <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole5.webp" />
+    <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole6.webp" />
+    <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole7.webp" />
+    <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole8.webp" />
+    <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole9.webp" />
+    <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole10.webp" />
   </div>
 </Layout>
 
@@ -201,11 +163,6 @@ import Layout from "../componets/Layout.astro";
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-  }
-  .kjole_img {
-    width: 150px;
-    flex: 1 1 auto;
-    object-fit: cover;
   }
 
   .om_kjoler div,
@@ -266,6 +223,9 @@ import Layout from "../componets/Layout.astro";
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: repeat(4, 1fr);
     }
+    .tekst_img {
+      height: 100%;
+    }
 
     .billede_tekst {
       grid-area: 2 / 1 / 4 /4;
@@ -278,13 +238,6 @@ import Layout from "../componets/Layout.astro";
     .billede_tekst .col {
       top: 20%;
       position: absolute;
-    }
-
-    .kjole_img {
-      width: 100%;
-      height: 100%;
-      margin-top: 0;
-      align-self: center;
     }
 
     .om_kjoler {

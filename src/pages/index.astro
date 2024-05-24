@@ -4,65 +4,7 @@ import Buttons from "../componets/Buttons.astro";
 import Card from "../componets/Card.astro";
 ---
 
-<Layout titel="Forside">
-  <video controls autoplay loop src="/public/stop_mostion.mp4"></video>
-
-  <div class="toej">
-    <a href="/sissel_edelbo">
-      <div class="toej-slide">
-        <img src="/public/img/sissel_slider_1.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_2.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_3.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_4.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_5.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_6.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_7.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_8.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_9.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_10.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_11.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_12.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_13.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_14.webp" alt="kjole fra Sissel Edelbo" />
-      </div>
-      <div class="toej-slide">
-        <img src="/public/img/sissel_slider_1.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_2.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_3.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_4.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_5.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_6.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_7.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_8.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_9.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_10.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_11.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_12.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_13.webp" alt="kjole fra Sissel Edelbo" />
-        <img src="/public/img/sissel_slider_14.webp" alt="kjole fra Sissel Edelbo" />
-      </div>
-    </a>
-  </div>
-
-  <div class="sissel">
-    <a href="/sissel_edelbo">
-      <div class="sissel-slide">
-        <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-        <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-        <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-        <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-        <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-      </div>
-      <div class="sissel-slide">
-        <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-        <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-        <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-        <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-        <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-      </div>
-    </a>
-  </div>
-
+<Layout titel="Forside" hero_video="/public/stop_mostion.mp4" hasVideo="true" hasCarousel="true" hasCarouselTekst="true">
   <div class="grid_kategori_index">
     <div class="billede_med_tekst">
       <div class="background-image-k2"></div>
@@ -134,81 +76,6 @@ import Card from "../componets/Card.astro";
 </Layout>
 
 <style>
-  /***************************** Video ******************************/
-  video {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  /***************************** Tøj infinite carousel  ******************************/
-
-  @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-
-  .toej {
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .toej:hover .toej-slide {
-    animation-play-state: paused;
-  }
-  .toej-slide {
-    display: inline-block;
-    animation: 45s slide infinite linear;
-  }
-
-  .toej-slide img {
-    width: auto;
-    height: 100px;
-  }
-
-  /***** Desktop *****/
-  @media (min-width: 800px) {
-    .toej-slide img {
-      height: 200px;
-    }
-  }
-
-  /***************************** Sissel Edelbo infinite carousel ******************************/
-
-  @keyframes slide {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
-
-  .sissel {
-    overflow: hidden;
-    white-space: nowrap;
-    background-color: var(--groen200);
-  }
-
-  .sissel-slide {
-    display: inline-block;
-    animation: 45s slide infinite linear;
-  }
-
-  .sissel-slide img {
-    width: auto;
-    height: 28px;
-  }
-  /***** Desktop *****/
-  @media (min-width: 800px) {
-    .sissel-slide img {
-      height: 32px;
-    }
-  }
-
   /***************************** Kategori ******************************/
 
   .background-image-k2 {
@@ -271,9 +138,7 @@ import Card from "../componets/Card.astro";
   }
 
   .grid_kategori_index {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 150px 0;
+    padding: 50px 0;
   }
 
   /***** Desktop *****/
@@ -290,6 +155,10 @@ import Card from "../componets/Card.astro";
 
     .grid_kategori {
       grid-column: 2 / 3;
+    }
+
+    .grid_kategori_index {
+      padding: 150px 0;
     }
   }
 
@@ -315,7 +184,7 @@ import Card from "../componets/Card.astro";
 
   /***************************** Instagram ******************************/
   .instagram {
-    padding: 150px 0;
+    padding: 50px 0;
   }
 
   .instagram h2 {
@@ -339,6 +208,9 @@ import Card from "../componets/Card.astro";
 
   /***** Desktop *****/
   @media (min-width: 800px) {
+    .instagram {
+      padding: 150px 0;
+    }
     .grid_istagram {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
