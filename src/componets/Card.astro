@@ -1,4 +1,4 @@
-<!-- ---
+---
 const { data } = Astro.props;
 console.log(data);
 ---
@@ -8,68 +8,95 @@ console.log(data);
     <div class="produkttekst">
       <img class="produktbillede" src={"/public/img/listeveiw/" + data.produktbillede} alt={"billede af " + data.beskrivelse} />
 
-      <p class="nyhed">{data.nyhed}</p>
-      <p class="udsolgt">{data.udsalg}</p>
+      {data.nyhed && <p class="nyhed">Nyhed</p>}
+      {data.udsalg && <p class="udsalg">Udsalg</p>}
     </div>
     <div class="card">
       <div class="produktinfo">
         <h1 class="produktnavn card_h1">{data.maerke}</h1>
-        <p class="beskrivelse">{data.beskrivelse}</p>
+        <p class="beskrivelselist">{data.beskrivelselist}</p>
       </div>
-      <div class="pris">
-        <p class="before">Før {data.beforepris} dkk</p>
-        <p class="newprice">{data.afterpris} dkk</p>
-      </div>
-      <a href="/kurv"> <img class="kurv" src="/public/img/placeholder.png" alt="placeholder" /></a>
+    </div>
+    <div class="pris">
+      {data.beforepris && <p class="before">Før pris: {data.beforepris} DKK</p>}
+
+      <p>{data.price}</p>
+
+      <p class="newprice">{data.afterpris} DKK</p>
     </div>
   </div>
+
+  <style>
+    .produkttekst {
+      position: relative;
+    }
+    .udsalg {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    .nyhed {
+      position: absolute;
+      top: 0;
+    }
+    .produktnavn {
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+    .produktbillede {
+      width: 250px;
+      height: 250px;
+    }
+    .kurv {
+      width: 35px;
+      height: 30px;
+      position: absolute;
+      right: 0;
+      bottom: 1%;
+    }
+
+    .produktinfo p {
+      padding-bottom: 10px;
+    }
+
+    .card {
+      flex-grow: 1;
+    }
+    .pris_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex-grow: 1;
+      position: relative;
+    }
+    .pris {
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 250px;
+      padding-left: 13.5px;
+      margin-bottom: 20px;
+    }
+    .produkt_card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .before {
+      text-decoration: line-through red 2px;
+    }
+
+    .beskrivelseslist {
+      padding-top: -30px;
+    }
+    .sko_card {
+      order: 13;
+    }
+
+    .butik_card {
+      order: 18;
+    }
+  </style>
 </article>
-
-<style>
-  .produkttekst {
-    position: relative;
-  }
-  .udsolgt {
-    position: absolute;
-    right: 0%;
-    bottom: 0%;
-  }
-  .nyhed {
-    position: absolute;
-    top: 0%;
-  }
-  .produktnavn {
-  }
-  .produktbillede {
-    width: 250px;
-    height: 250px;
-  }
-  .kurv {
-    width: 35px;
-    height: 30px;
-    right: 0%;
-    bottom: 5%;
-    position: absolute;
-  }
-  .produktinfo h2,
-  .produktinfo p {
-    padding: 20px 0;
-  }
-  .card {
-    position: relative;
-  }
-  article {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 250px;
-    height: 100%;
-  }
-
-  .produkt_card {
-    flex-shrink: 1;
-  }
-  .before {
-    text-decoration: line-through red 2px;
-  }
-</style> -->

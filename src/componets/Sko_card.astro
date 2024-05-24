@@ -1,13 +1,13 @@
 ---
-
+import Layout from "../componets/Layout.astro";
 ---
 
 <a href="singleveiw" class="sko_card">
   <article>
     <div class="card_best">
       <div class="tekst_sko">
-        <h1 class="overskrift card_h1">Overskrift</h1>
-        <p class="model">Model</p>
+        <h1 class="overskrift card_h1">INSPIRATION</h1>
+        <p class="model">Lilla Bibi Lou ruskinds støvle med hæl.</p>
       </div>
 
       <img class="sko" src="/public/img/listeveiw/skocard.webp" alt="sko" />
@@ -32,12 +32,21 @@
 
   .card_best {
     width: 540px;
-    background-color: var(--gul500);
   }
 
   .tekst_sko {
     padding: 40px;
     display: grid;
     gap: 10px;
+  }
+  .overskrift {
+    color: var(--offWhite);
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .model {
+    color: var(--offWhite);
   }
 </style>
