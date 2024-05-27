@@ -6,15 +6,15 @@ const { data } = Astro.props;
   <article>
     <div class="produkt_card">
       <div class="produkttekst">
-        <img class="produktbillede" src={"/public/img/listeveiw/" + data.produktbillede} alt={"billede af " + data.beskrivelse} />
+        <img class="produktbillede" src={"/public/img/listeveiw/" + data.Produktimg} alt={"billede af " + data.Produkt_beskrivelse} />
 
         {data.nyhed && <p class="nyhed">Nyhed</p>}
         {data.udsalg && <p class="udsalg">Udsalg</p>}
       </div>
       <div class="card">
         <div class="produktinfo">
-          <h1 class="produktnavn card_h1">{data.maerke}</h1>
-          <p class="beskrivelselist">{data.beskrivelselist}</p>
+          <h1 class="produktnavn card_h1">{data.Produktnavn}</h1>
+          <p class="beskrivelselist">{data.Sko_variant}</p>
         </div>
       </div>
       <div class="pris">
