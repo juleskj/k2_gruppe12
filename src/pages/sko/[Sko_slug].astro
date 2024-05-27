@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   }).then((response) => response.json());
   return data.map((sko) => {
     return {
-      params: { slug: sko.slug },
+      params: { Sko_slug: sko.Sko_slug },
       props: { myData: sko },
     };
   });
