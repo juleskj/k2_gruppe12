@@ -3,7 +3,18 @@
 const { title } = Astro.props;
 import Header from "../componets/Header.astro";
 import Footer from "../componets/Footer.astro";
-const { hero_img, hero_tekst, hero_undertekst, hero_video, hasImg = false, hasTekst = false, hasUnderTekst = false, hasVideo = false, hasCarousel = false, hasCarouselTekst = false } = Astro.props;
+const {
+  hero_img,
+  hero_tekst,
+  hero_undertekst,
+  hero_video,
+  hasImg = false,
+  hasTekst = false,
+  hasUnderTekst = false,
+  hasVideo = false,
+  hasCarousel = false,
+  hasCarouselTekst = false,
+} = Astro.props;
 ---
 
 <html lang="en">
@@ -13,49 +24,137 @@ const { hero_img, hero_tekst, hero_undertekst, hero_video, hasImg = false, hasTe
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <!-- her er titlen for siden -->
-    <link rel="stylesheet" href="/public/css/general.css" />
+    <link rel="stylesheet" href="/css/general.css" />
     <title>{title}</title>
   </head>
   <body>
     <Header />
     <div class="billede_med_tekst">
       {hasImg && <img src={hero_img} alt="Hero image" class="hero_img" />}
-      {hasVideo && <video controls autoplay loop src={hero_video} class="hero_video" />}
+      {
+        hasVideo && (
+          <video controls autoplay loop src={hero_video} class="hero_video" />
+        )
+      }
       {
         hasCarousel && (
           <div class="toej">
             <a href="/sissel_edelbo">
               <div class="toej-slide">
-                <img src="/public/img/sissel_slider_1.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_2.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_3.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_4.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_5.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_6.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_7.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_8.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_9.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_10.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_11.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_12.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_13.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_14.webp" alt="kjole fra Sissel Edelbo" />
+                <img
+                  src="/img/sissel_slider_1.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_2.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_3.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_4.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_5.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_6.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_7.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_8.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_9.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_10.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_11.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_12.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_13.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_14.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
               </div>
               <div class="toej-slide">
-                <img src="/public/img/sissel_slider_1.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_2.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_3.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_4.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_5.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_6.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_7.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_8.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_9.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_10.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_11.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_12.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_13.webp" alt="kjole fra Sissel Edelbo" />
-                <img src="/public/img/sissel_slider_14.webp" alt="kjole fra Sissel Edelbo" />
+                <img
+                  src="/img/sissel_slider_1.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_2.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_3.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_4.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_5.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_6.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_7.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_8.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_9.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_10.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_11.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_12.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_13.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
+                <img
+                  src="/img/sissel_slider_14.webp"
+                  alt="kjole fra Sissel Edelbo"
+                />
               </div>
             </a>
           </div>
@@ -67,18 +166,18 @@ const { hero_img, hero_tekst, hero_undertekst, hero_video, hasImg = false, hasTe
           <div class="sissel">
             <a href="/sissel_edelbo">
               <div class="sissel-slide">
-                <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-                <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-                <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-                <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-                <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+                <img src="/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+                <img src="/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+                <img src="/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+                <img src="/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+                <img src="/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
               </div>
               <div class="sissel-slide">
-                <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-                <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-                <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-                <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-                <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+                <img src="/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+                <img src="/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+                <img src="/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+                <img src="/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
+                <img src="/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
               </div>
             </a>
           </div>
