@@ -172,6 +172,14 @@ console.log(data);
 
   /***************************** Populære sko ******************************/
 
+  .popular h1 {
+    padding-bottom: 20px;
+  }
+
+  .popular_button {
+    padding-top: 20px;
+  }
+
   .grid_1_1_1_1 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -181,6 +189,17 @@ console.log(data);
   .popular_button {
     display: flex;
     justify-content: flex-end;
+  }
+
+  /***** Desktop *****/
+  @media (min-width: 800px) {
+    .popular h1 {
+      padding-bottom: 50px;
+    }
+
+    .popular_button {
+      padding-top: 50px;
+    }
   }
 
   /***************************** Instagram ******************************/
