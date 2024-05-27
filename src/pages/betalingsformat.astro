@@ -15,12 +15,7 @@ import Layout from "../componets/Layout.astro";
         </div>
       </div>
       <form class="rabat_form">
-        <input
-          type="text"
-          id="rabat_kode"
-          name="rabat_kode"
-          placeholder="Indsæt rabat kode"
-        />
+        <input type="text" id="rabat_kode" name="rabat_kode" placeholder="Indsæt rabat kode" />
 
         <input type="submit" value="Indløs" />
       </form>
@@ -44,125 +39,42 @@ import Layout from "../componets/Layout.astro";
       <form class="person_info">
         <fieldset>
           <legend>Levering:</legend>
-          <input
-            class="hjem"
-            type="radio"
-            id="hjem"
-            name="leverings_sted"
-            value="Levering til døren"
-            checked
-          />
+          <input class="hjem" type="radio" id="hjem" name="leverings_sted" value="Levering til døren" checked />
           <label for="hjemmelevering">Levering til døren</label>
           <br />
           <br />
-          <input
-            class="butik"
-            type="radio"
-            id="butik"
-            name="leverings_sted"
-            value="Afhent i butik"
-          />
+          <input class="butik" type="radio" id="butik" name="leverings_sted" value="Afhent i butik" />
           <label for="butiklevering">Afhent i butik</label>
           <br />
           <br />
           <div class="hjem_levering">
             <div class="flex_1_1">
-              <input
-                type="text"
-                id="fnavn"
-                name="fnavn"
-                placeholder="Dit fornavn"
-                required
-              />
+              <input type="text" id="fnavn" name="fnavn" placeholder="Dit fornavn" required />
 
-              <input
-                type="text"
-                id="name"
-                name="enavn"
-                placeholder="Dit efternavn"
-                required
-              />
+              <input type="text" id="name" name="enavn" placeholder="Dit efternavn" required />
             </div>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Din email"
-              required
-            />
+            <input type="email" id="email" name="email" placeholder="Din email" required />
 
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Telefon nummer"
-              required
-            />
+            <input type="tel" id="phone" name="phone" placeholder="Telefon nummer" required />
 
-            <input
-              type="text"
-              id="address"
-              name="address"
-              placeholder="Din adresse"
-              required
-            />
-            <input
-              type="text"
-              id="floor"
-              name="floor"
-              placeholder="Lejelighed, etage, ovs. (valgfri)"
-            />
+            <input type="text" id="address" name="address" placeholder="Din adresse" required />
+            <input type="text" id="floor" name="floor" placeholder="Lejelighed, etage, ovs. (valgfri)" />
 
-            <input
-              type="text"
-              id="land"
-              name="land"
-              placeholder="Land"
-              required
-            />
+            <input type="text" id="land" name="land" placeholder="Land" required />
             <div class="flex_1_1">
-              <input
-                type="number"
-                id="zipcode"
-                name="zipcode"
-                placeholder="Postnummer"
-                required
-              />
+              <input type="number" id="zipcode" name="zipcode" placeholder="Postnummer" required />
 
-              <input
-                type="text"
-                id="city"
-                name="city"
-                placeholder="By"
-                required
-              />
+              <input type="text" id="city" name="city" placeholder="By" required />
             </div>
           </div>
 
           <div class="butik_levering none">
-            <input
-              type="text"
-              id="location"
-              name="location"
-              placeholder="Brug din lokalition"
-            />
+            <input type="text" id="location" name="location" placeholder="Brug din lokalition" />
             <p>Eller</p>
             <div class="flex_1_1">
-              <input
-                type="text"
-                id="land"
-                name="land"
-                placeholder="Land/område"
-                required
-              />
+              <input type="text" id="land" name="land" placeholder="Land/område" required />
 
-              <input
-                type="text"
-                id="adresse"
-                name="adresse"
-                placeholder="Adresse"
-                required
-              />
+              <input type="text" id="adresse" name="adresse" placeholder="Adresse" required />
               <input type="submit" value="Find butik" />
             </div>
           </div>
@@ -173,97 +85,31 @@ import Layout from "../componets/Layout.astro";
         <fieldset>
           <legend>Fakturerings adresse</legend>
 
-          <input
-            class="samme_adresse"
-            type="radio"
-            id="samme_adresse"
-            name="fakturerings_adresse"
-            value="samme_adresse"
-            checked
-          />
+          <input class="samme_adresse" type="radio" id="samme_adresse" name="fakturerings_adresse" value="samme_adresse" checked />
           <label for="butiklevering">Samme adresse som leverings adresse</label>
           <br />
           <br />
-          <input
-            class="anden_adresse"
-            type="radio"
-            id="anden_adresse"
-            name="fakturerings_adresse"
-            value="anden_adresse"
-          />
+          <input class="anden_adresse" type="radio" id="anden_adresse" name="fakturerings_adresse" value="anden_adresse" />
           <label for="anden_adresse">Brug en anden fakturerings adresse</label>
 
           <div class="fakturerings_adresse none">
             <div class="flex_1_1">
-              <input
-                type="text"
-                id="fnavn"
-                name="fnavn"
-                placeholder="Dit fornavn"
-                required
-              />
+              <input type="text" id="fnavn" name="fnavn" placeholder="Dit fornavn" required />
 
-              <input
-                type="text"
-                id="name"
-                name="enavn"
-                placeholder="Dit efternavn"
-                required
-              />
+              <input type="text" id="name" name="enavn" placeholder="Dit efternavn" required />
             </div>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Din email"
-              required
-            />
+            <input type="email" id="email" name="email" placeholder="Din email" required />
 
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Telefon nummer"
-              required
-            />
+            <input type="tel" id="phone" name="phone" placeholder="Telefon nummer" required />
 
-            <input
-              type="text"
-              id="address"
-              name="address"
-              placeholder="Din adresse"
-              required
-            />
-            <input
-              type="text"
-              id="floor"
-              name="floor"
-              placeholder="Lejelighed, etage, ovs. (valgfri)"
-            />
+            <input type="text" id="address" name="address" placeholder="Din adresse" required />
+            <input type="text" id="floor" name="floor" placeholder="Lejelighed, etage, ovs. (valgfri)" />
 
-            <input
-              type="text"
-              id="land"
-              name="land"
-              placeholder="Land"
-              required
-            />
+            <input type="text" id="land" name="land" placeholder="Land" required />
             <div class="flex_1_1">
-              <input
-                type="number"
-                id="zipcode"
-                name="zipcode"
-                placeholder="Postnummer"
-                required
-              />
+              <input type="number" id="zipcode" name="zipcode" placeholder="Postnummer" required />
 
-              <input
-                type="text"
-                id="city"
-                name="city"
-                placeholder="By"
-                required
-              />
+              <input type="text" id="city" name="city" placeholder="By" required />
             </div>
           </div>
         </fieldset>
@@ -271,22 +117,11 @@ import Layout from "../componets/Layout.astro";
       <form class="betallings_metode">
         <fieldset>
           <legend>Betallings metode:</legend>
-          <input
-            type="radio"
-            id="betallingskort"
-            name="betalling_metode"
-            value="Betallingskort"
-            checked
-          />
+          <input type="radio" id="betallingskort" name="betalling_metode" value="Betallingskort" checked />
           <label for="betallingskort">Betallingskort</label>
           <br />
           <br />
-          <input
-            type="radio"
-            id="mobilepay"
-            name="betalling_metode"
-            value="Mobilepay"
-          />
+          <input type="radio" id="mobilepay" name="betalling_metode" value="Mobilepay" />
           <label for="mobilepay">Mobilepay</label>
           <br />
           <br />
@@ -300,13 +135,9 @@ import Layout from "../componets/Layout.astro";
 <script is:inline>
   document.querySelector(".butik").addEventListener("mousedown", clickButik);
   document.querySelector(".hjem").addEventListener("mousedown", clickHjem);
-  document
-    .querySelector(".anden_adresse")
-    .addEventListener("mousedown", clickAndenAdresse);
+  document.querySelector(".anden_adresse").addEventListener("mousedown", clickAndenAdresse);
 
-  document
-    .querySelector(".samme_adresse")
-    .addEventListener("mousedown", clickSammeAdresse);
+  document.querySelector(".samme_adresse").addEventListener("mousedown", clickSammeAdresse);
 
   function clickSammeAdresse() {
     document.querySelector(".fakturerings_adresse").classList.add("none");
