@@ -3,48 +3,39 @@ import Layout from "../componets/Layout.astro";
 import Kjole_I_Butik from "../componets/Kjole_I_Butik.astro";
 ---
 
-<Layout titel="Sissel Edelbo" hero_img="/public/img/Hero_sissele.webp" hero_tekst="SISSEL EDELBO" hero_undertekst="Kan Kun KØBES I BUTIK" hasImg="true" hasTekst="ture" hasUnderTekst="true">
+<Layout titel="Sissel Edelbo" hero_img="/public/img/Hero_sissele.webp" hero_tekst="SISSEL EDELBO" hero_undertekst="Kan Kun KØBES I BUTIK" hasImg="true" hasTekst="ture" hasUnderTekst="true" hasCarouselTekst="true">
   <!-- ***************sissel slider*************** -->
 
-  <div class="sissel">
-    <div class="sissel-slide">
-      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-    </div>
-    <div class="sissel-slide">
-      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-      <img src="/public/img/sissel.svg" alt="Sissel Edelbo - kun i butik" />
-    </div>
-  </div>
-  <h1>SISSEL EDELBO</h1>
   <div class="om_kjoler">
     <div class="col">
-      <h2>Æstetiske Bæredygtighed i Tøjkunst</h2>
-      <p>Sissel Eddelbo's design er kendetegnet ved sit unikke og innovative brug af genbrugsmaterialer.</p>
-      <p>Hendes tøjkollektioner kombinerer æstetik og bæredygtighed på en harmonisk måde, der appellerer til moderne forbrugere med en bevidsthed om miljøet.</p>
-      <p>Da hver kjole er en unik skabelse, er de eksklusivt tilgængelige i vores fysiske butik.</p>
+      <h2>Æstetiske bæredygtighed i tøjkunst</h2>
+      <p class="luft">Sissel Eddelbo's design er kendetegnet ved sit unikke og innovative brug af genbrugsmaterialer.</p>
+      <p class="luft">Hendes tøjkollektioner kombinerer æstetik og bæredygtighed på en harmonisk måde, der appellerer til moderne forbrugere med en bevidsthed om miljøet.</p>
+      <p class="luft">Da hver kjole er en unik skabelse, er de eksklusivt tilgængelige i vores fysiske butik.</p>
     </div>
     <img class="order" src="/public/img/sissel_edelbo_hvid.webp" alt="billede af fuldt hvidt outfit" />
     <img src="/public/img/sissel_edelbo_lilla.webp" alt="billede af lille kjole" />
     <img src="/public/img/sissel_edelbo_pink.webp" alt="billede af pink top" />
     <img src="/public/img/sissel_edelbo_gul.webp" alt="billede af gult outfit med trøje og bukser" />
     <div class="queute">
-      <p>“Hos SISSEL EDELBO er socialt ansvar ikke blot en del af vores forretning; det er kernen i alt, hvad vi gør.”</p>
+      <p class="italic">“Hos SISSEL EDELBO er socialt ansvar ikke blot en del af vores forretning; det er kernen i alt, hvad vi gør.”</p>
     </div>
   </div>
   <div class="om_sissel">
-    <h2>Om SISSEL EDELBO</h2>
-    <div class="col">
-      <p>Sissel Edelbo er grundlagt af de danske iværksættere Jeanne Sissel Thomsen og Chris Elmengaard samt designeren bag det bæredygtige tøjmærke, Eddelbo. Deres brand er dedikeret til at skabe miljøvenligt tøj ved at genbruge overskydende materialer fra indiske landsbyer og hjem. Med en mission om at mindske tekstilaffaldet og fremme en mere bæredygtig modeindustri, arbejder Eddelbo målrettet på at anvende ressourcer på en ansvarlig måde.</p>
-    </div>
-    <div class="col">
-      <p>Sissel Edelbo er en anerkendt design brance, hvis design er synonymt med ansvarlig mode. Hendes signaturstil er præget af et unikt og innovativt brug af genbrugsmaterialer, der giver hendes tøjkollektioner et særligt præg af bæredygtighed og kreativitet. Deres designs formår at forene æstetik og miljøbevidsthed på en harmonisk måde og tiltaler derfor moderne forbrugere, der ønsker at klæde sig med stil og samvittighed.</p>
+    <h2>Om Sissel Edelbo</h2>
+    <div class="grid_om">
+      <div class="col">
+        <p>
+          Sissel Edelbo er grundlagt af de danske iværksættere Jeanne Sissel Thomsen og Chris Elmengaard samt designeren bag det bæredygtige tøjmærke, Eddelbo. Deres brand er dedikeret til at skabe miljøvenligt tøj ved at genbruge overskydende materialer fra indiske landsbyer og hjem. Med en mission om at mindske tekstilaffaldet og fremme en mere
+          bæredygtig modeindustri, arbejder Eddelbo målrettet på at anvende ressourcer på en ansvarlig måde.
+        </p>
+      </div>
+      <div class="col">
+        <p>
+          Sissel Edelbo er en anerkendt design brance, hvis design er synonymt med ansvarlig mode. Hendes signaturstil er præget af et unikt og innovativt brug af genbrugsmaterialer, der giver hendes tøjkollektioner et særligt præg af bæredygtighed og kreativitet. Deres designs formår at forene æstetik og miljøbevidsthed på en harmonisk måde og
+          tiltaler derfor moderne forbrugere, der ønsker at klæde sig med stil og samvittighed.
+        </p>
+      </div>
     </div>
   </div>
 
@@ -55,9 +46,9 @@ import Kjole_I_Butik from "../componets/Kjole_I_Butik.astro";
     <Kjole_I_Butik sissel_kjole="/public/img/sissel_kjole4.webp" />
 
     <div class="billede_tekst">
-      <img class="tekst_img" src="/public/img/tekst_billede.webp" alt="placeholder" />
+      <img class="tekst_img" src="/public/img/stort_img_sissel.webp" alt="placeholder" />
       <div class="col">
-        <h2>Stærke Bånd og Bæredygtig Produktion: En Glædelig Genforening"</h2>
+        <h2>Stærke Bånd og Bæredygtig Produktion: En Glædelig Genforening</h2>
         <p>Det er altid en glæde at genforenes med de mennesker, som vi gennem årene har opbygget stærke og nære relationer til. Her får vi mulighed for at fordybe os i produktionen, holde os opdaterede om produktionsstatus og sikre, at alle involverede arbejder i et sundt og sikkert miljø – noget, der er af allerstørste betydning for os.</p>
       </div>
     </div>
@@ -71,6 +62,13 @@ import Kjole_I_Butik from "../componets/Kjole_I_Butik.astro";
 </Layout>
 
 <style>
+  .om_kjoler {
+    padding: 50px 0;
+  }
+
+  .kjoler_i_butik {
+    padding: 50px 0;
+  }
   h1 {
     padding-top: 5rem;
   }
@@ -80,6 +78,14 @@ import Kjole_I_Butik from "../componets/Kjole_I_Butik.astro";
   p,
   h2 {
     color: var(--offWhite);
+  }
+
+  .luft {
+    padding: 10px 0;
+  }
+
+  .italic {
+    font-style: italic;
   }
 
   .om_kjoler .col,
@@ -113,10 +119,6 @@ import Kjole_I_Butik from "../componets/Kjole_I_Butik.astro";
   .om_sissel,
   .kjoler_i_butik .col {
     padding: 50px 20px;
-  }
-
-  .om_sissel {
-    margin: 15rem 0;
   }
   .om_sissel p {
     padding: 20px 0;
@@ -199,6 +201,21 @@ import Kjole_I_Butik from "../componets/Kjole_I_Butik.astro";
     }
     .queute {
       order: 5;
+    }
+
+    .om_kjoler {
+      padding: 150px 0;
+    }
+
+    .kjoler_i_butik {
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+
+    .grid_om {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
     }
   }
 </style>

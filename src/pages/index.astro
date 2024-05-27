@@ -1,7 +1,14 @@
 ---
 import Layout from "../componets/Layout.astro";
 import Buttons from "../componets/Buttons.astro";
-//import Card from "../componets/Card.astro";
+import Card from "../componets/Card.astro";
+const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
+  },
+}).then((res) => res.json());
+console.log(data);
 ---
 
 <Layout titel="Forside" hero_video="/public/stop_mostion.mp4" hasVideo="true" hasCarousel="true" hasCarouselTekst="true">
@@ -34,7 +41,13 @@ import Buttons from "../componets/Buttons.astro";
 
   <div class="popular">
     <h1>Se de mest populære sko</h1>
-    <section class="grid_popular"></section>
+    <section class="grid_1_1_1_1">
+      {
+        data.slice(0, 4).map((sko) => {
+          return <Card data={sko} />;
+        })
+      }
+    </section>
     <div class="popular_button">
       <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko </a></Buttons>
     </div>
@@ -159,17 +172,10 @@ import Buttons from "../componets/Buttons.astro";
 
   /***************************** Populære sko ******************************/
 
-  .grid_popular {
-    padding: 50px 0;
+  .grid_1_1_1_1 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-
-  /***** Desktop *****/
-  @media (min-width: 800px) {
-    .grid_popular {
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    }
+    gap: 20px;
   }
 
   .popular_button {
