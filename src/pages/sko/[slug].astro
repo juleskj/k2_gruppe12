@@ -2,12 +2,16 @@
 import Layout from "../../componets/Layout.astro";
 import Card from "../../componets/Card.astro";
 export async function getStaticPaths() {
-  const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2", {
-    method: "GET",
-    headers: {
-      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
-    },
-  }).then((response) => response.json());
+  const data = await fetch(
+    "https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
+      },
+    }
+  ).then((response) => response.json());
   return data.map((sko) => {
     return {
       params: { slug: sko.slug },
@@ -24,12 +28,28 @@ console.log(myData);
   <div class="desktop">
     <div class="sko">
       <div class="enkeltsko">
-        <img class="produktimg" src={"/public/img/listeveiw/" + myData.produktimg} alt={"billede af " + myData.produkt_beskrivelse} />
+        <img
+          class="produktimg"
+          src={"/img/listeveiw/" + myData.produktimg}
+          alt={"billede af " + myData.produkt_beskrivelse}
+        />
       </div>
       <div class="ekstrabillede">
-        <img class="produktimg" src={"/public/img/listeveiw/" + myData.ekstrabillede1} alt={"ekstra billede af " + myData.produkt_beskrivelse} />
-        <img class="produktimg" src={"/public/img/listeveiw/" + myData.ekstrabillede2} alt={"ekstra billede af " + myData.produkt_beskrivelse} />
-        <img class="produktimg" src={"/public/img/listeveiw/" + myData.ekstrabillede3} alt={"ekstra billede af " + myData.produkt_beskrivelse} />
+        <img
+          class="produktimg"
+          src={"/img/listeveiw/" + myData.ekstrabillede1}
+          alt={"ekstra billede af " + myData.produkt_beskrivelse}
+        />
+        <img
+          class="produktimg"
+          src={"/img/listeveiw/" + myData.ekstrabillede2}
+          alt={"ekstra billede af " + myData.produkt_beskrivelse}
+        />
+        <img
+          class="produktimg"
+          src={"/img/listeveiw/" + myData.ekstrabillede3}
+          alt={"ekstra billede af " + myData.produkt_beskrivelse}
+        />
       </div>
     </div>
     <div class="produkt_info">
@@ -38,9 +58,9 @@ console.log(myData);
       <p class="varienat"></p>
       <p class="Sko_variant">{myData.sko_variant}</p>
       <div class="prik">
-        <div class="color1"><img src="/public/img/prik.png" alt="" /></div>
-        <div class="color2"><img src="/public/img/prik.png" alt="" /></div>
-        <div class="color3"><img src="/public/img/prik.png" alt="" /></div>
+        <div class="color1"><img src="/img/prik.png" alt="" /></div>
+        <div class="color2"><img src="/img/prik.png" alt="" /></div>
+        <div class="color3"><img src="/img/prik.png" alt="" /></div>
       </div>
 
       <p class="beskrivelse">{myData.produkt_beskrivelse}</p>
