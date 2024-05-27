@@ -2,7 +2,7 @@
 import Layout from "../../componets/Layout.astro";
 import Card from "../../componets/Card.astro";
 export async function getStaticPaths() {
-  const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/K2", {
+  const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2", {
     method: "GET",
     headers: {
       apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
@@ -19,6 +19,13 @@ const { myData } = Astro.props;
 console.log(myData);
 ---
 
+<!-- 
+
+curl 'https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2?select=*' \
+-H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw" \
+-H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw"
+          
+           -->
 <Layout titel="Singleveiw">
   <p class="nyhed">NYHED</p>
   <div class="desktop">
