@@ -19,38 +19,31 @@ const { myData } = Astro.props;
 console.log(myData);
 ---
 
-<!-- 
-
-curl 'https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2?select=*' \
--H "apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw" \
--H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw"
-          
-           -->
-<Layout titel="Singleveiw">
+<Layout titel="tittel">
   <p class="nyhed">NYHED</p>
   <div class="desktop">
     <div class="sko">
       <div class="enkeltsko">
-        <img class="produktimg" src={"/public/img/listeveiw/" + myData.Produktimg} alt={"billede af " + myData.Produkt_beskrivelse} />
+        <img class="produktimg" src={"/public/img/listeveiw/" + myData.produktimg} alt={"billede af " + myData.produkt_beskrivelse} />
       </div>
       <div class="ekstrabillede">
-        <img class="produktimg" src={"/public/img/listeveiw/" + myData.ekstrabillede1} alt={"ekstra billede af " + myData.Produkt_beskrivelse} />
-        <img class="produktimg" src={"/public/img/listeveiw/" + myData.ekstrabillede2} alt={"ekstra billede af " + myData.Produkt_beskrivelse} />
-        <img class="produktimg" src={"/public/img/listeveiw/" + myData.ekstrabillede3} alt={"ekstra billede af " + myData.Produkt_beskrivelse} />
+        <img class="produktimg" src={"/public/img/listeveiw/" + myData.ekstrabillede1} alt={"ekstra billede af " + myData.produkt_beskrivelse} />
+        <img class="produktimg" src={"/public/img/listeveiw/" + myData.ekstrabillede2} alt={"ekstra billede af " + myData.produkt_beskrivelse} />
+        <img class="produktimg" src={"/public/img/listeveiw/" + myData.ekstrabillede3} alt={"ekstra billede af " + myData.produkt_beskrivelse} />
       </div>
     </div>
     <div class="produkt_info">
-      <h1 class="produktnavn card_h1">{myData.Produktnavn}</h1>
+      <h1 class="produktnavn card_h1">{myData.produktnavn}</h1>
 
       <p class="varienat"></p>
-      <p class="Sko_variant">{myData.Sko_variant}</p>
+      <p class="Sko_variant">{myData.sko_variant}</p>
       <div class="prik">
         <div class="color1"><img src="/public/img/prik.png" alt="" /></div>
         <div class="color2"><img src="/public/img/prik.png" alt="" /></div>
         <div class="color3"><img src="/public/img/prik.png" alt="" /></div>
       </div>
 
-      <p class="beskrivelse">{myData.Produkt_beskrivelse}</p>
+      <p class="beskrivelse">{myData.produkt_beskrivelse}</p>
       <p class="before">Før pris</p>
       <p class="newprice">Ny pris</p>
       <button>størrelse</button>
