@@ -1,8 +1,10 @@
 ---
+//her henter vi data fra liste veiw så vi kan bruge det i vores card
 const { data } = Astro.props;
 ---
 
 <article>
+  <!-- her sender  vi dataen vider til vores slug singleview for det ekelte card men klikker på -->
   <a class="card_a" href={`/sko/${data.slug}`}>
     <div class="produkt_card">
       <div class="produkttekst">
@@ -32,9 +34,7 @@ const { data } = Astro.props;
         <p class="newprice">{data.afterpris} DKK</p>
       </div>
     </div>
-    <a href="/kurv"
-      ><img class="kurv" src="/img/kurv.svg" alt="billede af indkøbs kurv" /></a
-    >
+    <a href="/kurv" class="kurv"></a>
   </a>
 </article>
 
@@ -69,6 +69,13 @@ const { data } = Astro.props;
     position: absolute;
     right: 0;
     bottom: 1%;
+    background-image: url(/img/kurv.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .kurv:hover {
+    background-image: url(/img/kurv_filled.svg);
   }
 
   .produktinfo {

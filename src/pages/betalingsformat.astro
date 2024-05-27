@@ -1,13 +1,17 @@
 ---
 import Layout from "../componets/Layout.astro";
+import Submit from "../componets/Submit.astro";
 ---
 
 <Layout titel="Betaling">
   <div class="betalling_side">
     <div class="produkt_info order">
-      <h2>placeholder</h2>
+      <h2>Din kurv</h2>
       <div class="card">
-        <img src="/img/placeholder.png" alt="placeholder" />
+        <img
+          src="/img/listeveiw/sko_1_1.webp"
+          alt="billede af sneaker sko som er lyserød"
+        />
         <div class="info">
           <p class="str">str: 37</p>
           <p class="before_pris">Før: 1000Dkk</p>
@@ -22,7 +26,7 @@ import Layout from "../componets/Layout.astro";
           placeholder="Indsæt rabat kode"
         />
 
-        <input type="submit" value="Indløs" />
+        <Submit value="Indløs" />
       </form>
       <div class="udgifter">
         <div class="udgifter_info">
@@ -163,7 +167,7 @@ import Layout from "../componets/Layout.astro";
                 placeholder="Adresse"
                 required
               />
-              <input type="submit" value="Find butik" />
+              <Submit value="Find butik" />
             </div>
           </div>
         </fieldset>
@@ -290,7 +294,7 @@ import Layout from "../componets/Layout.astro";
           <label for="mobilepay">Mobilepay</label>
           <br />
           <br />
-          <input type="submit" value="Køb" />
+          <Submit value="Køb" />
         </fieldset>
       </form>
     </div>
@@ -355,9 +359,6 @@ import Layout from "../componets/Layout.astro";
     flex: 1 1 200px;
     min-width: 200px;
   }
-  .flex_1_1 input[value="find butik"] {
-    flex: 1 1 auto;
-  }
 
   .person_info {
     display: flex;
@@ -391,20 +392,6 @@ import Layout from "../componets/Layout.astro";
     outline: solid 1px var(--lyserRoed600);
     background-color: var(--lyserRoed200);
     transition: all 0.3s ease-in-out;
-  }
-  /* her bliver min submit knap stylet */
-  input[type="submit"] {
-    width: 100px;
-    height: 40px;
-    color: white;
-    border: 2px solid var(--lyserRoed600);
-    background-color: var(--lyserRoed600);
-    border-radius: 3px;
-  }
-
-  input[type="submit"]:hover {
-    background-color: var(--lyserRoed400);
-    transition: 0.5s;
   }
 
   /* her bliver mine intputs som har typen "radio" stylet */

@@ -1,0 +1,22 @@
+---
+const { value } = Astro.props;
+---
+
+<input type="submit" value={value} />
+
+<style>
+  /* her bliver min submit knap stylet */
+  input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    color: white;
+    border: 2px solid var(--lyserRoed600);
+    background-color: var(--lyserRoed600);
+    border-radius: 3px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: var(--lyserRoed400);
+    transition: 0.5s;
+  }
+</style>
