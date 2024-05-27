@@ -3,46 +3,67 @@
 ---
 
 <footer>
-  <div class="kontakt">
-    <h2>Kontakt</h2>
-    <ul>
-      <li>Tlf. +45 86 88 24 00</li>
-      <li>Mail. <span class="underline">Knoop@c.dk</span></li>
-    </ul>
-  </div>
-  <div class="genvej">
-    <h2>Genvej</h2>
-    <ul>
-      <li><a href="/omk2">Om K2</a></li>
-      <li><a href="/kontakt">Kontakt</a></li>
+  <div class="footer_container">
+    <div class="kontakt">
+      <h2>Kontakt</h2>
+      <ul>
+        <li>Tlf. +45 86 88 24 00</li>
+        <li>Mail. <span class="underline">Knoop@c.dk</span></li>
+        <li class="some">
+          <a
+            href="https://www.facebook.com/profile.php?id=100063613946864"
+            target="_blank"
+            ><img src="/img/facebook_icon.svg" alt="facebook icon" /></a
+          >
+          <a
+            href="https://www.facebook.com/profile.php?id=100063613946864"
+            target="_blank"
+            ><img src="/img/insta_icon.svg" alt="facebook icon" /></a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="genvej">
+      <h2>Genvej</h2>
+      <ul>
+        <li><a href="/omk2">Om K2</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
 
-      <li><a href="/handelsbetingelser">Handelsbetingelser</a></li>
-    </ul>
-  </div>
-  <div class="abningstider">
-    <h2>Åbningstider</h2>
-    <ul>
-      <li>Mandag: <span></span>10.00-17.00</li>
-      <li>Tirsdag: <span></span>10.00-17.00</li>
-      <li>Onsdag: <span></span>10.00-17.00</li>
-      <li>Torsdag: <span></span>10.00-17.00</li>
-      <li>Fredag:<span></span> 10.00-17.00</li>
-      <li>Lørdag: <span></span>10.00-17.00</li>
-      <li>Søndag: <span></span>LUKKET</li>
-    </ul>
-  </div>
+        <li><a href="/handelsbetingelser">Handelsbetingelser</a></li>
+      </ul>
+    </div>
+    <div class="abningstider">
+      <h2>Åbningstider</h2>
+      <ul>
+        <li>Mandag: <span></span>10.00-17.00</li>
+        <li>Tirsdag: <span></span>10.00-17.00</li>
+        <li>Onsdag: <span></span>10.00-17.00</li>
+        <li>Torsdag: <span></span>10.00-17.00</li>
+        <li>Fredag:<span></span> 10.00-17.00</li>
+        <li>Lørdag: <span></span>10.00-17.00</li>
+        <li>Søndag: <span></span>LUKKET</li>
+      </ul>
+    </div>
 
-  <div class="map">
-    <p>Lyngby Hovedgade 72, 2800 Kongens Lyngby</p>
-    <iframe
-      class="responsive-iframe"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.3664825516435!2d12.501878976758745!3d55.769506590704616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46524f2d0e6d4b0b%3A0xeb730b552c04fa14!2sK2!5e0!3m2!1sen!2sdk!4v1715776446123!5m2!1sen!2sdk"
-      width="300"
-      height="300"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map">
+      <p>Lyngby Hovedgade 72, 2800 Kongens Lyngby</p>
+      <iframe
+        class="responsive-iframe"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.3664825516435!2d12.501878976758745!3d55.769506590704616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46524f2d0e6d4b0b%3A0xeb730b552c04fa14!2sK2!5e0!3m2!1sen!2sdk!4v1715776446123!5m2!1sen!2sdk"
+        width="300"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div class="betalingsmuliheder">
+    <p>©2024 K2 shoes and bags</p>
+    <img
+      src="/img/betalingsmuligheder.svg"
+      alt="billede af de forskellige bank/betallings muligheder"
+    />
   </div>
 </footer>
 
@@ -52,7 +73,7 @@
       text-align: center;
     }
   }
-  footer {
+  .footer_container {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -74,12 +95,26 @@
     gap: 0.4rem;
   }
 
+  /* SoMe iconer fra kontakt listen */
+  .some {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+  }
+
+  .some img {
+    width: 50px;
+    height: 50px;
+  }
+
   .abningstider ul {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
 
+  /* mellemrummet mellem tiden og dagen i åbningstiderne */
   .abningstider span {
     padding: 0 10px;
   }
@@ -121,15 +156,35 @@
     text-decoration: underline var(--lyserRoed400) 2px;
   }
 
+  .betalingsmuliheder {
+    display: flex;
+    flex-direction: column;
+  }
+
   @media (min-width: 800px) {
-    footer {
+    .betalingsmuliheder {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .betalingsmuliheder img {
+      flex: 1 1 auto;
+      min-width: 200px;
+      max-width: 600px;
+      align-self: center;
+      filter: grayscale(1);
+    }
+    .footer_container {
       flex-flow: row;
       align-items: flex-start;
       padding: 50px 20px 0 20px;
       text-align: none;
       gap: 7rem;
     }
-    footer :last-child {
+    .footer_container :last-child {
       min-height: 100px;
       max-height: 300px;
       max-width: 300px;
