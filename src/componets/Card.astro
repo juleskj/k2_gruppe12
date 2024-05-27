@@ -2,32 +2,32 @@
 const { data } = Astro.props;
 ---
 
-<!-- <a href={`sko/${data.slug}`}> -->
-<article>
-  <div class="produkt_card">
-    <div class="produkttekst">
-      <img class="produktbillede" src={"/public/img/listeveiw/" + data.produktimg} alt={"billede af " + data.produkt_beskrivelse} />
+<a href={`sko/${data.slug}`}>
+  <article>
+    <div class="produkt_card">
+      <div class="produkttekst">
+        <img class="produktbillede" src={"img/listeveiw/" + data.produktimg} alt={"billede af " + data.produkt_beskrivelse} />
 
-      {data.nyhed && <p class="nyhed">Nyhed</p>}
-      {data.udsalg && <p class="udsalg">Udsalg</p>}
-    </div>
-    <div class="card">
-      <div class="produktinfo">
-        <h1 class="produktnavn card_h1">{data.produktnavn}</h1>
-        <p class="beskrivelselist">{data.Sko_variant}</p>
+        {data.nyhed && <p class="nyhed">Nyhed</p>}
+        {data.udsalg && <p class="udsalg">Udsalg</p>}
+      </div>
+      <div class="card">
+        <div class="produktinfo">
+          <h1 class="produktnavn card_h1">{data.produktnavn}</h1>
+          <p class="beskrivelselist">{data.Sko_variant}</p>
+        </div>
+      </div>
+      <div class="pris">
+        {data.beforepris && <p class="before">Før pris: {data.beforepris} DKK</p>}
+
+        <p>{data.price}</p>
+
+        <p class="newprice">{data.afterpris} DKK</p>
       </div>
     </div>
-    <div class="pris">
-      {data.beforepris && <p class="before">Før pris: {data.beforepris} DKK</p>}
-
-      <p>{data.price}</p>
-
-      <p class="newprice">{data.afterpris} DKK</p>
-    </div>
-  </div>
-  <a href="/kurv"> <img class="kurv" src="/public/img/kurv.svg" alt="placeholder" /></a>
-</article>
-
+    <a href="/kurv"> <img class="kurv" src="/public/img/kurv.svg" alt="placeholder" /></a>
+  </article>
+</a>
 <style>
   .produkttekst {
     position: relative;
