@@ -1,6 +1,19 @@
 ---
 import Layout from "../../componets/Layout.astro";
 import Card from "../../componets/Card.astro";
+//her henter vi noget data for vores database til nogle få sko længere nede
+const data = await fetch(
+  "https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
+    },
+  }
+).then((res) => res.json());
+
+//her henter vi data ned fra en enkelt sko som kommer fra listeview
 export async function getStaticPaths() {
   const data = await fetch(
     "https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2",
@@ -20,7 +33,6 @@ export async function getStaticPaths() {
   });
 }
 const { myData } = Astro.props;
-console.log(myData);
 ---
 
 <Layout titel="tittel">
@@ -68,10 +80,16 @@ console.log(myData);
       <p class="newprice">Ny pris</p>
       <button>størrelse</button>
       <button>Læg i kurv</button>
-
-      <div class="inspiration">
-        <p class="inspi_tekts">Du vil måske også lide</p>
-      </div>
+    </div>
+  </div>
+  <div class="inspiration_col">
+    <h2>Bliv inspireret</h2>
+    <div class="inspiration">
+      {
+        data.slice(0, 4).map((sko) => {
+          return <Card data={sko} />;
+        })
+      }
     </div>
   </div>
 </Layout>
@@ -102,7 +120,7 @@ console.log(myData);
   .color1,
   .color2,
   .color3 {
-    border-radius: 900px;
+    border-radius: 50%;
     width: 30px;
     height: 30px;
     background-color: black;
@@ -115,23 +133,18 @@ console.log(myData);
 
   .inspiration {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* grid-template-columns: repeat(auto-fill, minmax(800px, 1fr)); */
-    gap: 15px;
-    padding-top: 30px;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
   }
-
-  .inspir {
-    width: 100px;
-  }
-  .inspi_tekts {
-    padding-top: 50px;
-    text-align: center;
+  .inspiration_col {
+    padding: 100px 0;
   }
 
   @media (min-width: 800px) {
+    .inspiration {
+      flex-wrap: nowrap;
+    }
     .desktop {
       display: flex;
       flex-direction: row;
@@ -140,16 +153,16 @@ console.log(myData);
       gap: 40px;
     }
     .sko {
-      min-width: 500px;
+      min-width: 250px;
       flex: 1 1 auto;
     }
     .produkt_info {
-      min-width: 500px;
+      min-width: 250px;
       flex: 1 1 auto;
     }
 
     .ekstrabillede img {
-      height: 150px;
+      height: 100%;
       width: 150px;
     }
   }

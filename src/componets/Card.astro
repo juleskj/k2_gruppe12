@@ -8,7 +8,7 @@ const { data } = Astro.props;
       <div class="produkttekst">
         <img
           class="produktbillede"
-          src={"img/listeveiw/" + data.produktimg}
+          src={"../img/listeveiw/" + data.produktimg}
           alt={"billede af " + data.produkt_beskrivelse}
         />
 
@@ -88,6 +88,7 @@ const { data } = Astro.props;
     display: flex;
     flex-direction: column;
     position: relative;
+    min-width: 250px;
   }
   article a {
     text-decoration: none;
