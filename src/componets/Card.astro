@@ -2,32 +2,42 @@
 const { data } = Astro.props;
 ---
 
-<a href={`sko/${data.slug}`}>
-  <article>
+<article>
+  <a class="card_a" href={`sko/${data.slug}`}>
     <div class="produkt_card">
       <div class="produkttekst">
-        <img class="produktbillede" src={"img/listeveiw/" + data.produktimg} alt={"billede af " + data.produkt_beskrivelse} />
+        <img
+          class="produktbillede"
+          src={"img/listeveiw/" + data.produktimg}
+          alt={"billede af " + data.produkt_beskrivelse}
+        />
 
         {data.nyhed && <p class="nyhed">Nyhed</p>}
         {data.udsalg && <p class="udsalg">Udsalg</p>}
       </div>
-      <div class="card">
-        <div class="produktinfo">
-          <h1 class="produktnavn card_h1">{data.produktnavn}</h1>
-          <p class="beskrivelselist">{data.Sko_variant}</p>
-        </div>
+
+      <div class="produktinfo">
+        <h1 class="produktnavn card_h1">{data.produktnavn}</h1>
+        <p class="beskrivelselist">{data.sko_variant}</p>
       </div>
       <div class="pris">
-        {data.beforepris && <p class="before">Før pris: {data.beforepris} DKK</p>}
+        {
+          data.beforepris && (
+            <p class="before">Før pris: {data.beforepris} DKK</p>
+          )
+        }
 
         <p>{data.price}</p>
 
         <p class="newprice">{data.afterpris} DKK</p>
       </div>
     </div>
-    <a href="/kurv"> <img class="kurv" src="/public/img/kurv.svg" alt="placeholder" /></a>
-  </article>
-</a>
+    <a href="/kurv"
+      ><img class="kurv" src="/img/kurv.svg" alt="billede af indkøbs kurv" /></a
+    >
+  </a>
+</article>
+
 <style>
   .produkttekst {
     position: relative;
@@ -36,18 +46,22 @@ const { data } = Astro.props;
     position: absolute;
     right: 0;
     bottom: 0;
+    padding: 5px;
+    text-transform: uppercase;
   }
   .nyhed {
     position: absolute;
     top: 0;
+    padding: 5px;
+    text-transform: uppercase;
   }
   .produktnavn {
-    padding-bottom: 20px;
     padding-top: 20px;
+    font-weight: bold;
   }
   .produktbillede {
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: 100%;
   }
   .kurv {
     width: 35px;
@@ -57,28 +71,26 @@ const { data } = Astro.props;
     bottom: 1%;
   }
 
-  .produktinfo p {
-    padding-bottom: 10px;
-  }
-
-  .card {
+  .produktinfo {
     flex-grow: 1;
+    padding-bottom: 20px;
   }
-  .pris_container {
+  .pris {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-start;
     flex-grow: 1;
     position: relative;
   }
 
-  a {
+  article {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 250px;
-    padding-left: 13.5px;
-    margin-bottom: 20px;
+  }
+  article a {
+    text-decoration: none;
   }
   .produkt_card {
     display: flex;

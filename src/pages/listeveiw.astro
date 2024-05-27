@@ -4,18 +4,32 @@ import Card from "../componets/Card.astro";
 import Sko_card from "../componets/Sko_card.astro";
 import Butik_card from "../componets/Butik_card.astro";
 
-const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2", {
-  method: "GET",
-  headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
-  },
-}).then((res) => res.json());
+const data = await fetch(
+  "https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
+    },
+  }
+).then((res) => res.json());
 console.log(data);
 ---
 
 <!-- https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/K2
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw -->
 <Layout titel="Listeveiw">
+  <div class="filtrering">
+    <h1>Vores sko</h1>
+    <p>
+      Opdag vores udvalg af designerkvalitetssko i topklasse - her finder du
+      noget for enhver smag. Udforsk vores sortiment af tidløse elementer og
+      statement styles nedenfor og find det perfekte par, der passer til din
+      stil.
+    </p>
+    <hr />
+  </div>
   <section class="grid_1_1_1_1">
     {
       data.map((sko) => {
@@ -31,6 +45,14 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenF
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+  }
+
+  .filtrering {
+    text-align: center;
+    padding: 100px 0;
+  }
+  hr {
+    margin: 30px 30%;
   }
 
   /* nth child betyder at vi tager barnet inde i secktion nummerer er i paranteset */
