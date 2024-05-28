@@ -2,27 +2,27 @@
 const { sissel_kjole } = Astro.props;
 ---
 
-<div class="butik_icon">
+<section class="butik_icon">
   <span class="icon"></span>
   <span class="tekst none"><p>Købes kun i butik</p></span>
   <img class="kjole_img" src={sissel_kjole} alt="billede af sissel kjole" />
-</div>
+</section>
 
-<script is:inline>
-  document
-    .querySelector(".butik_icon")
-    .addEventListener("mouseover", mouseOverIcon);
+<script>
+  const butikIcon = document.querySelector("section");
+
+  const spanTekst = document.querySelector("span.tekst");
+
+  butikIcon.addEventListener("mouseover", mouseOverIcon);
 
   function mouseOverIcon() {
     console.log("musen er over");
-    document.querySelector("span.tekst").classList.remove("none");
-    document
-      .querySelector(".butik_icon")
-      .addEventListener("mouseout", mouseOutIcon);
+    spanTekst.classList.remove("none");
+    this.addEventListener("mouseout", mouseOutIcon);
   }
 
   function mouseOutIcon() {
-    document.querySelector("span.tekst").classList.add("none");
+    spanTekst.classList.add("none");
     console.log("musen er out");
   }
 </script>
@@ -33,15 +33,13 @@ const { sissel_kjole } = Astro.props;
   }
 
   .butik_icon {
+    position: relative;
     flex: 1 1 auto;
     object-fit: cover;
   }
-  .butik_icon {
-    position: relative;
-  }
 
   .butik_icon:hover {
-    filter: brightness(60%);
+    filter: brightness(70%);
   }
 
   span.icon {
@@ -59,7 +57,9 @@ const { sissel_kjole } = Astro.props;
 
     rotate: 50deg;
   }
+
   span.tekst p {
+    z-index: 1;
     font-size: 30px;
     color: var(--offWhite);
   }

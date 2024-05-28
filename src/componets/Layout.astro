@@ -4,10 +4,12 @@ const { title } = Astro.props;
 import Header from "../componets/Header.astro";
 import Footer from "../componets/Footer.astro";
 const {
+  hero_icon,
   hero_img,
   hero_tekst,
   hero_undertekst,
   hero_video,
+
   hasImg = false,
   hasTekst = false,
   hasUnderTekst = false,
@@ -186,7 +188,15 @@ const {
 
       <div class="tekst">
         {hasTekst && <h1 class="hero_tekst">{hero_tekst}</h1>}
-        {hasUnderTekst && <h2 class="header_undertekst">{hero_undertekst}</h2>}
+        {
+          hasUnderTekst && (
+            <div class="header_undertekst">
+              <h2>{hero_undertekst}</h2>
+
+              <img src={hero_icon} alt="Hero image" class="hero_icon" />
+            </div>
+          )
+        }
       </div>
     </div>
     <main>
@@ -232,13 +242,25 @@ const {
     color: var(--offBlack);
     background-color: var(--offWhite);
     padding: 5px 5px;
+    border-radius: 2px;
   }
 
   .header_undertekst {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+
     color: var(--offBlack);
     background-color: var(--offWhite);
     padding: 5px 5px;
     font-weight: normal;
+    border-radius: 2px;
+  }
+
+  .hero_icon {
+    width: 50px;
+    height: 50px;
   }
 
   /***************************** Tøj infinite carousel  ******************************/
