@@ -38,6 +38,14 @@ const { myData } = Astro.props;
 ---
 
 <Layout titel="tittel">
+  <nav>
+    <ul>
+      <li><a href="#">Forside</a> /</li>
+      <li><a href="/listeveiw">Sko</a> /</li>
+      <li><p>{myData.produktnavn}</p></li>
+    </ul>
+  </nav>
+
   <div class="desktop">
     <div class="sko">
       <div class="enkeltsko">
@@ -119,18 +127,24 @@ const { myData } = Astro.props;
   </div>
 
   <style>
-    input[type="submit"] {
-      width: 100%;
-      height: 40px;
-      color: white;
-      border: 2px solid var(--lyserRoed600);
-      background-color: var(--lyserRoed600);
-      border-radius: 3px;
+    /* brødkrumme sti */
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+    li {
+      list-style-type: none;
+      text-transform: uppercase;
+    }
+    li a {
+      text-decoration: none;
+      color: var(--offBlack);
+      font-weight: normal;
     }
 
-    input[type="submit"]:hover {
-      background-color: var(--lyserRoed400);
-      transition: 0.5s;
+    li p {
+      font-weight: bold;
     }
 
     select {
