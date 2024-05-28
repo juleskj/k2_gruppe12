@@ -5,39 +5,42 @@ import Buttons from "../componets/Buttons.astro";
 
 <Layout titel="Kurv">
   <div class="produkt_info">
-    <h2>Din kurv</h2>
+    <h1>Din kurv</h1>
+    <h2>DLS Sport</h2>
     <div class="desktop_row">
-      <div class="card">
+      <section class="card">
         <img
           src="/img/listeveiw/sko_1_1.webp"
           alt="billede af sneaker sko som er lyserød"
         />
+
         <div class="info">
-          <p class="str">str: 37</p>
-          <p class="before_pris">Før: 1000Dkk</p>
+          <p class="str">str:37</p>
+          <p class="before_pris">Før:1000Dkk</p>
           <p class="new_pris">800DKK</p>
         </div>
-      </div>
+      </section>
 
-      <div class="udgifter">
-        <div class="udgifter_info">
-          <p>Rabat</p>
-          <p>Subtotal</p>
+      <section class="col">
+        <div class="udgifter">
+          <div class="udgifter_info">
+            <p>Rabat</p>
+            <p>Subtotal</p>
 
-          <p><strong>I Alt</strong></p>
+            <p><strong>I Alt</strong></p>
+          </div>
+          <div class="udgifter_tal">
+            <p class="rabat">200 DKK</p>
+            <p class="subtotal">800 DKK</p>
+
+            <p class="i_alt"><strong>600 DKK</strong></p>
+          </div>
         </div>
-        <div class="udgifter_tal">
-          <p class="rabat">200 DKK</p>
-          <p class="subtotal">800 DKK</p>
-
-          <p class="i_alt"><strong>600 DKK</strong></p>
-        </div>
-      </div>
+        <Buttons class="knap" variant="primary"
+          ><a href="/betalingsformat">Går til betaling</a></Buttons
+        >
+      </section>
     </div>
-
-    <Buttons variant="primary"
-      ><a href="/betalingsformat">Går til betaling</a></Buttons
-    >
   </div>
 </Layout>
 
@@ -49,12 +52,18 @@ import Buttons from "../componets/Buttons.astro";
     gap: 40px;
     padding-bottom: 100px;
   }
+
+  .col {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
   .card {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 20px;
+    gap: 2rem;
   }
   .card img,
   .info {
@@ -63,9 +72,8 @@ import Buttons from "../componets/Buttons.astro";
   }
 
   .info {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    justify-items: end;
+    display: flex;
+    flex-direction: column;
   }
   .new_pris {
     grid-area: 2/ 2 / 3 /3;
@@ -75,6 +83,14 @@ import Buttons from "../componets/Buttons.astro";
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+  }
+
+  .udgifter_tal,
+  .udgifter_info,
+  .info {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
   }
 
   @media (min-width: 800px) {
@@ -87,7 +103,7 @@ import Buttons from "../componets/Buttons.astro";
 
     .udgifter,
     .card {
-      gap: 100px;
+      gap: 8rem;
     }
 
     .card img {
