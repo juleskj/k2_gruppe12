@@ -2,7 +2,10 @@
 import Layout from "../componets/Layout.astro";
 ---
 
-<Layout titel="Kontakt">
+<Layout
+  titel="Kontakt"
+  metaDescription="paa siden kan man se kontakt information for personalet til k2"
+>
   <div class="flex">
     <div class="abningstider">
       <h1 class="aabningstider_h1">Åbningstider</h1>
@@ -35,7 +38,10 @@ import Layout from "../componets/Layout.astro";
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        referrerpolicy="no-referrer-when-downgrade"
+        title="kort_over_k2_butik"
+      >
+      </iframe>
       <p class="adresse">Lyngby Hovedgade 72, 2800 Kongens Lyngby<p></p></p>
     </div>
   </div>
@@ -49,15 +55,17 @@ import Layout from "../componets/Layout.astro";
           <p><span>Mail:</span> <span class="underline">Knoop@c.dk</span></p>
         </div>
         <h2 class="luft_2">Nyhedsbrev</h2>
-        <input
-          class="luft_2"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Din email"
-          required
-        />
-        <input type="submit" value="Send" />
+        <form action="nyhedsbrev">
+          <input
+            class="luft_2"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Din email"
+            required
+          />
+          <input type="submit" value="Send" />
+        </form>
       </div>
     </div>
   </div>
