@@ -9,106 +9,109 @@ import Buttons from "../componets/Buttons.astro";
     <h2>DLS Sport</h2>
     <div class="desktop_row">
       <section class="card">
-        <img
-          src="/img/listeveiw/sko_1_1.webp"
-          alt="billede af sneaker sko som er lyserød"
-        />
+        <img src="/img/listeveiw/sko_1_1.webp" alt="billede af sneaker sko som er lyserød" />
 
         <div class="info">
           <p class="str">str:37</p>
           <p class="before_pris">Før:1000Dkk</p>
           <p class="new_pris">800DKK</p>
+          <p class="color1"></p>
         </div>
-      </section>
+        <section class="col">
+          <div class="udgifter">
+            <div class="udgifter_info">
+              <p>Rabat</p>
+              <p>Subtotal</p>
 
-      <section class="col">
-        <div class="udgifter">
-          <div class="udgifter_info">
-            <p>Rabat</p>
-            <p>Subtotal</p>
+              <p><strong>I Alt</strong></p>
+            </div>
+            <div class="udgifter_tal">
+              <p class="rabat">200 DKK</p>
+              <p class="subtotal">800 DKK</p>
 
-            <p><strong>I Alt</strong></p>
+              <p class="i_alt"><strong>600 DKK</strong></p>
+            </div>
           </div>
-          <div class="udgifter_tal">
-            <p class="rabat">200 DKK</p>
-            <p class="subtotal">800 DKK</p>
-
-            <p class="i_alt"><strong>600 DKK</strong></p>
-          </div>
-        </div>
-        <Buttons class="knap" variant="primary"
-          ><a href="/betalingsformat">Går til betaling</a></Buttons
-        >
+          <Buttons class="knap" variant="primary"><a href="/betalingsformat">Går til betaling</a></Buttons>
+        </section>
       </section>
     </div>
   </div>
-</Layout>
 
-<style>
-  /* her bliver produkt informationen stylet */
-  .produkt_info {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding-bottom: 100px;
-  }
-
-  .col {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-  .card {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-  }
-  .card img,
-  .info {
-    width: 100px;
-    flex: 1 1 auto;
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-  }
-  .new_pris {
-    grid-area: 2/ 2 / 3 /3;
-  }
-
-  .udgifter {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-
-  .udgifter_tal,
-  .udgifter_info,
-  .info {
-    display: flex;
-    flex-flow: column;
-    gap: 1rem;
-  }
-
-  @media (min-width: 800px) {
-    .desktop_row {
+  <style>
+    /* her bliver produkt informationen stylet */
+    .produkt_info {
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
+      flex-direction: column;
+      gap: 40px;
       padding-bottom: 100px;
     }
+    .color1 {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: var(--orange600);
+    }
 
-    .udgifter,
+    .col {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
     .card {
-      gap: 8rem;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+    .card img,
+    .info {
+      width: 100px;
+      flex: 1 1 auto;
     }
 
-    .card img {
-      height: 100%;
-      width: 250px;
+    .info {
+      display: flex;
+      flex-direction: column;
     }
-  }
-</style>
+    .new_pris {
+      grid-area: 2/ 2 / 3 /3;
+    }
+
+    .udgifter {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    .udgifter_tal,
+    .udgifter_info,
+    .info {
+      display: flex;
+      flex-flow: column;
+      gap: 1rem;
+    }
+
+    @media (min-width: 800px) {
+      .desktop_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 100px;
+      }
+
+      .udgifter,
+      .card {
+        gap: 8rem;
+      }
+      .prik {
+      }
+
+      .card img {
+        height: 100%;
+        width: 250px;
+      }
+    }
+  </style>
+</Layout>

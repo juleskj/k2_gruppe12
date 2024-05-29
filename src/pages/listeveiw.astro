@@ -3,7 +3,8 @@ import Layout from "../componets/Layout.astro";
 import Card from "../componets/Card.astro";
 import Sko_card from "../componets/Sko_card.astro";
 import Butik_card from "../componets/Butik_card.astro";
-import Buttons from "../componets/Buttons.astro";
+
+import Line from "../componets/Line.astro";
 
 // her henter vi væres data fra superbase
 const data = await fetch(
@@ -23,12 +24,12 @@ const data = await fetch(
   <div class="filtrering">
     <h1>Vores sko</h1>
     <p>
-      Opdag vores udvalg af designerkvalitetssko i topklasse - her finder du
-      noget for enhver smag. Udforsk vores sortiment af tidløse elementer og
-      statement styles nedenfor og find det perfekte par, der passer til din
-      stil.
+      Opdag vores udvalg af designer kvalitets sko i topklasse - her finder du
+      noget for enhver smag. <br /> Udforsk vores sortiment af tidløse elementer
+      og statement styles nedenfor <br /> og find det perfekte par, der passer til
+      din stil.
     </p>
-    <hr />
+    <Line />
   </div>
   <section class="grid_1_1_1_1">
     <!-- her laver vi en "for each" som istedet hedder map, som er en anden måde at gøre det på, koden retunerer
@@ -44,6 +45,7 @@ const data = await fetch(
 </Layout>
 
 <!-- <script src="https://unpkg.com/@supabase/supabase-js@2">
+  forsøg på filtrering
   const supabase = createClient(
     "https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2",
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw"
@@ -66,11 +68,7 @@ const data = await fetch(
 
   .filtrering {
     text-align: center;
-    padding: 100px 0;
-  }
-  hr {
-    border-top: 2px solid var(--lyserRoed600);
-    margin: 40px 40%;
+    padding: 5rem;
   }
 
   @media (min-width: 800px) {
