@@ -12,7 +12,7 @@ import Submit from "../componets/Submit.astro";
         <p class="color1"></p>
         <div class="info">
           <p class="str">str: 37</p>
-          <p class="before_pris">Før: 1000DKK</p>
+          <p class="before_pris befor_pris">Før: 1000DKK</p>
           <p class="new_pris">800DKK</p>
         </div>
       </div>
@@ -167,6 +167,10 @@ import Submit from "../componets/Submit.astro";
   </script>
 
   <style>
+    .befor_pris {
+      text-decoration: line-through var(--orange600) 2px;
+    }
+
     .none {
       display: none;
     }

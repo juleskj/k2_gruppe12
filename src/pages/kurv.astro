@@ -13,7 +13,7 @@ import Buttons from "../componets/Buttons.astro";
 
         <div class="info">
           <p class="str">str:37</p>
-          <p class="before_pris">Før:1000Dkk</p>
+          <p class="before_pris befor_pris">Før:1000Dkk</p>
           <p class="new_pris">800DKK</p>
           <p class="color1"></p>
         </div>
@@ -40,6 +40,10 @@ import Buttons from "../componets/Buttons.astro";
 
   <style>
     /* her bliver produkt informationen stylet */
+
+    .befor_pris {
+      text-decoration: line-through var(--orange600) 2px;
+    }
     .produkt_info {
       display: flex;
       flex-direction: column;

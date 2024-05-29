@@ -60,9 +60,9 @@ const { myData } = Astro.props;
       </div>
       <div class="col">
         <div class="prik">
-          <div class="color1"><img src="/img/prik_single_1" alt="" /></div>
-          <div class="color2"><img src="/img/prik_single_2" alt="" /></div>
-          <div class="color3"><img src="/img/prik_single_3" alt="" /></div>
+          <div class="color1"></div>
+          <div class="color2"></div>
+          <div class="color3"></div>
         </div>
 
         <p class="beskrivelse">{myData.produkt_beskrivelse}</p>
@@ -129,7 +129,7 @@ const { myData } = Astro.props;
     }
 
     .befor_pris {
-      text-decoration: line-through red 2px;
+      text-decoration: line-through var(--orange600) 2px;
     }
     .udsalg {
       position: absolute;
@@ -169,13 +169,25 @@ const { myData } = Astro.props;
       flex: 1 1 auto;
     }
 
-    .color1,
-    .color2,
+    .color1 {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: var(--lyserRoed200);
+    }
+
+    .color2 {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: var(--brun100);
+    }
+
     .color3 {
       border-radius: 50%;
       width: 30px;
       height: 30px;
-      background-color: black;
+      background-color: var(--offBlack);
     }
     .prik {
       display: flex;
