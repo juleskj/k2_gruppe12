@@ -9,6 +9,7 @@ const {
   hero_tekst,
   hero_undertekst,
   hero_video,
+  metaDescription,
 
   hasImg = false,
   hasTekst = false,
@@ -25,6 +26,7 @@ const {
     <link rel="icon" sizes="32x32" href="/img/logok2.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={metaDescription} />
     <!-- her er titlen for siden -->
     <link rel="stylesheet" href="/css/general.css" />
     <title>{title}</title>
