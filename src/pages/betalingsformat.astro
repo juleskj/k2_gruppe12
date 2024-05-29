@@ -8,23 +8,16 @@ import Submit from "../componets/Submit.astro";
     <div class="produkt_info order">
       <h2>Din kurv</h2>
       <div class="card">
-        <img
-          src="/img/listeveiw/sko_1_1.webp"
-          alt="billede af sneaker sko som er lyserød"
-        />
+        <img src="/img/listeveiw/sko_1_1.webp" alt="billede af sneaker sko som er lyserød" />
+        <p class="color1"></p>
         <div class="info">
           <p class="str">str: 37</p>
-          <p class="before_pris">Før: 1000Dkk</p>
+          <p class="before_pris">Før: 1000DKK</p>
           <p class="new_pris">800DKK</p>
         </div>
       </div>
       <form class="rabat_form">
-        <input
-          type="text"
-          id="rabat_kode"
-          name="rabat_kode"
-          placeholder="Indsæt rabat kode"
-        />
+        <input type="text" id="rabat_kode" name="rabat_kode" placeholder="Indsæt rabat kode" />
 
         <Submit value="Indløs" />
       </form>
@@ -48,125 +41,42 @@ import Submit from "../componets/Submit.astro";
       <form class="person_info">
         <fieldset>
           <legend>Levering:</legend>
-          <input
-            class="hjem"
-            type="radio"
-            id="hjem"
-            name="leverings_sted"
-            value="Levering til døren"
-            checked
-          />
+          <input class="hjem" type="radio" id="hjem" name="leverings_sted" value="Levering til døren" checked />
           <label for="hjemmelevering">Levering til døren</label>
           <br />
           <br />
-          <input
-            class="butik"
-            type="radio"
-            id="butik"
-            name="leverings_sted"
-            value="Afhent i butik"
-          />
+          <input class="butik" type="radio" id="butik" name="leverings_sted" value="Afhent i butik" />
           <label for="butiklevering">Afhent i butik</label>
           <br />
           <br />
           <div class="hjem_levering">
             <div class="flex_1_1">
-              <input
-                type="text"
-                id="fnavn"
-                name="fnavn"
-                placeholder="Dit fornavn"
-                required
-              />
+              <input type="text" id="fnavn" name="fnavn" placeholder="Dit fornavn" required />
 
-              <input
-                type="text"
-                id="name"
-                name="enavn"
-                placeholder="Dit efternavn"
-                required
-              />
+              <input type="text" id="name" name="enavn" placeholder="Dit efternavn" required />
             </div>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Din email"
-              required
-            />
+            <input type="email" id="email" name="email" placeholder="Din email" required />
 
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Telefon nummer"
-              required
-            />
+            <input type="tel" id="phone" name="phone" placeholder="Telefon nummer" required />
 
-            <input
-              type="text"
-              id="address"
-              name="address"
-              placeholder="Din adresse"
-              required
-            />
-            <input
-              type="text"
-              id="floor"
-              name="floor"
-              placeholder="Lejelighed, etage, ovs. (valgfri)"
-            />
+            <input type="text" id="address" name="address" placeholder="Din adresse" required />
+            <input type="text" id="floor" name="floor" placeholder="Lejelighed, etage, ovs. (valgfri)" />
 
-            <input
-              type="text"
-              id="land"
-              name="land"
-              placeholder="Land"
-              required
-            />
+            <input type="text" id="land" name="land" placeholder="Land" required />
             <div class="flex_1_1">
-              <input
-                type="number"
-                id="zipcode"
-                name="zipcode"
-                placeholder="Postnummer"
-                required
-              />
+              <input type="number" id="zipcode" name="zipcode" placeholder="Postnummer" required />
 
-              <input
-                type="text"
-                id="city"
-                name="city"
-                placeholder="By"
-                required
-              />
+              <input type="text" id="city" name="city" placeholder="By" required />
             </div>
           </div>
 
           <div class="butik_levering none">
-            <input
-              type="text"
-              id="location"
-              name="location"
-              placeholder="Brug din lokalition"
-            />
+            <input type="text" id="location" name="location" placeholder="Brug din lokalition" />
             <p>Eller</p>
             <div class="flex_1_1">
-              <input
-                type="text"
-                id="land"
-                name="land"
-                placeholder="Land/område"
-                required
-              />
+              <input type="text" id="land" name="land" placeholder="Land/område" required />
 
-              <input
-                type="text"
-                id="adresse"
-                name="adresse"
-                placeholder="Adresse"
-                required
-              />
+              <input type="text" id="adresse" name="adresse" placeholder="Adresse" required />
               <Submit value="Find butik" />
             </div>
           </div>
@@ -177,97 +87,31 @@ import Submit from "../componets/Submit.astro";
         <fieldset>
           <legend>Fakturerings adresse</legend>
 
-          <input
-            class="samme_adresse"
-            type="radio"
-            id="samme_adresse"
-            name="fakturerings_adresse"
-            value="samme_adresse"
-            checked
-          />
+          <input class="samme_adresse" type="radio" id="samme_adresse" name="fakturerings_adresse" value="samme_adresse" checked />
           <label for="butiklevering">Samme adresse som leverings adresse</label>
           <br />
           <br />
-          <input
-            class="anden_adresse"
-            type="radio"
-            id="anden_adresse"
-            name="fakturerings_adresse"
-            value="anden_adresse"
-          />
+          <input class="anden_adresse" type="radio" id="anden_adresse" name="fakturerings_adresse" value="anden_adresse" />
           <label for="anden_adresse">Brug en anden fakturerings adresse</label>
 
           <div class="fakturerings_adresse none">
             <div class="flex_1_1">
-              <input
-                type="text"
-                id="fnavn"
-                name="fnavn"
-                placeholder="Dit fornavn"
-                required
-              />
+              <input type="text" id="fnavn" name="fnavn" placeholder="Dit fornavn" required />
 
-              <input
-                type="text"
-                id="name"
-                name="enavn"
-                placeholder="Dit efternavn"
-                required
-              />
+              <input type="text" id="name" name="enavn" placeholder="Dit efternavn" required />
             </div>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Din email"
-              required
-            />
+            <input type="email" id="email" name="email" placeholder="Din email" required />
 
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              placeholder="Telefon nummer"
-              required
-            />
+            <input type="tel" id="phone" name="phone" placeholder="Telefon nummer" required />
 
-            <input
-              type="text"
-              id="address"
-              name="address"
-              placeholder="Din adresse"
-              required
-            />
-            <input
-              type="text"
-              id="floor"
-              name="floor"
-              placeholder="Lejelighed, etage, ovs. (valgfri)"
-            />
+            <input type="text" id="address" name="address" placeholder="Din adresse" required />
+            <input type="text" id="floor" name="floor" placeholder="Lejelighed, etage, ovs. (valgfri)" />
 
-            <input
-              type="text"
-              id="land"
-              name="land"
-              placeholder="Land"
-              required
-            />
+            <input type="text" id="land" name="land" placeholder="Land" required />
             <div class="flex_1_1">
-              <input
-                type="number"
-                id="zipcode"
-                name="zipcode"
-                placeholder="Postnummer"
-                required
-              />
+              <input type="number" id="zipcode" name="zipcode" placeholder="Postnummer" required />
 
-              <input
-                type="text"
-                id="city"
-                name="city"
-                placeholder="By"
-                required
-              />
+              <input type="text" id="city" name="city" placeholder="By" required />
             </div>
           </div>
         </fieldset>
@@ -275,22 +119,11 @@ import Submit from "../componets/Submit.astro";
       <form class="betallings_metode">
         <fieldset>
           <legend>Betallings metode:</legend>
-          <input
-            type="radio"
-            id="betallingskort"
-            name="betalling_metode"
-            value="Betallingskort"
-            checked
-          />
+          <input type="radio" id="betallingskort" name="betalling_metode" value="Betallingskort" checked />
           <label for="betallingskort">Betallingskort</label>
           <br />
           <br />
-          <input
-            type="radio"
-            id="mobilepay"
-            name="betalling_metode"
-            value="Mobilepay"
-          />
+          <input type="radio" id="mobilepay" name="betalling_metode" value="Mobilepay" />
           <label for="mobilepay">Mobilepay</label>
           <br />
           <br />
@@ -299,153 +132,162 @@ import Submit from "../componets/Submit.astro";
       </form>
     </div>
   </div>
-</Layout>
 
-<script is:inline>
-  document.querySelector(".butik").addEventListener("mousedown", clickButik);
-  document.querySelector(".hjem").addEventListener("mousedown", clickHjem);
-  document
-    .querySelector(".anden_adresse")
-    .addEventListener("mousedown", clickAndenAdresse);
+  <script is:inline>
+    document.querySelector(".butik").addEventListener("mousedown", clickButik);
+    document.querySelector(".hjem").addEventListener("mousedown", clickHjem);
+    document.querySelector(".anden_adresse").addEventListener("mousedown", clickAndenAdresse);
 
-  document
-    .querySelector(".samme_adresse")
-    .addEventListener("mousedown", clickSammeAdresse);
+    document.querySelector(".samme_adresse").addEventListener("mousedown", clickSammeAdresse);
 
-  function clickSammeAdresse() {
-    document.querySelector(".fakturerings_adresse").classList.add("none");
-  }
+    function clickSammeAdresse() {
+      document.querySelector(".fakturerings_adresse").classList.add("none");
+    }
 
-  function clickAndenAdresse() {
-    document.querySelector(".fakturerings_adresse").classList.remove("none");
-  }
+    function clickAndenAdresse() {
+      document.querySelector(".fakturerings_adresse").classList.remove("none");
+    }
 
-  function clickButik() {
-    console.log("butik");
-    document.querySelector(".hjem_levering").classList.add("none");
-    document.querySelector(".butik_levering").classList.remove("none");
-    document.querySelector(".fakturerings_adresse").classList.remove("none");
+    function clickButik() {
+      console.log("butik");
+      document.querySelector(".hjem_levering").classList.add("none");
+      document.querySelector(".butik_levering").classList.remove("none");
+      document.querySelector(".fakturerings_adresse").classList.remove("none");
 
-    document.getElementById("anden_adresse").checked = true;
-  }
+      document.getElementById("anden_adresse").checked = true;
+    }
 
-  function clickHjem() {
-    console.log("hjem");
-    document.querySelector(".fakturerings_adresse").classList.add("none");
-    document.querySelector(".butik_levering").classList.add("none");
-    document.querySelector(".hjem_levering").classList.remove("none");
-    document.getElementById("samme_adresse").checked = true;
-  }
-</script>
+    function clickHjem() {
+      console.log("hjem");
+      document.querySelector(".fakturerings_adresse").classList.add("none");
+      document.querySelector(".butik_levering").classList.add("none");
+      document.querySelector(".hjem_levering").classList.remove("none");
+      document.getElementById("samme_adresse").checked = true;
+    }
+  </script>
 
-<style>
-  .none {
-    display: none;
-  }
+  <style>
+    .none {
+      display: none;
+    }
 
-  .betalling_side {
-    padding-bottom: 100px;
-    position: relative;
-  }
-  .flex_1_1 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-
-  .flex_1_1 input[type="text"],
-  .flex_1_1 input[type="number"] {
-    flex: 1 1 200px;
-    min-width: 200px;
-  }
-
-  .person_info {
-    display: flex;
-    flex-flow: column;
-  }
-
-  fieldset {
-    border: 2px solid var(--lyserRoed600);
-    padding: 20px;
-    margin-top: 50px;
-    border-radius: 3px;
-  }
-  legend {
-    font-size: 20px;
-  }
-  input[type="text"],
-  input[type="number"],
-  input[type="tel"],
-  input[type="email"] {
-    width: 100%;
-    margin: 5px 0;
-    padding: 2px 2px;
-    border: 2px solid var(--lyserRoed600);
-    border-radius: 3px;
-  }
-  /* når man er i fæltet i formen */
-  input[type="text"]:focus,
-  input[type="number"]:focus,
-  input[type="tel"]:focus,
-  input[type="email"]:focus {
-    outline: solid 1px var(--lyserRoed600);
-    background-color: var(--lyserRoed200);
-    transition: all 0.3s ease-in-out;
-  }
-
-  /* her bliver mine intputs som har typen "radio" stylet */
-  input[type="radio"] {
-    width: 30px;
-  }
-  input[type="radio"]:checked {
-    accent-color: var(--lyserRoed600);
-  }
-
-  /* her bliver produkt informationen stylet */
-  .produkt_info {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-  }
-  .card {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-  }
-  .card img,
-  .info {
-    width: 100px;
-    flex: 1 1 auto;
-  }
-
-  .info {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    justify-items: end;
-  }
-  .new_pris {
-    grid-area: 2/ 2 / 3 /3;
-  }
-
-  .udgifter {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-
-  @media (min-width: 800px) {
     .betalling_side {
-      gap: 50px;
+      padding-bottom: 100px;
       position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    }
+    .flex_1_1 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .color1 {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: var(--orange600);
+      align-self: flex-end;
     }
 
-    .order {
-      order: 2;
+    .flex_1_1 input[type="text"],
+    .flex_1_1 input[type="number"] {
+      flex: 1 1 200px;
+      min-width: 200px;
     }
-  }
-</style>
+
+    .person_info {
+      display: flex;
+      flex-flow: column;
+    }
+
+    fieldset {
+      border: 2px solid var(--lyserRoed600);
+      padding: 20px;
+      margin-top: 50px;
+      border-radius: 3px;
+    }
+    legend {
+      font-size: 20px;
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="email"] {
+      width: 100%;
+      margin: 5px 0;
+      padding: 2px 2px;
+      border: 2px solid var(--lyserRoed600);
+      border-radius: 3px;
+    }
+    /* når man er i fæltet i formen */
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="tel"]:focus,
+    input[type="email"]:focus {
+      outline: solid 1px var(--lyserRoed600);
+      background-color: var(--lyserRoed200);
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* her bliver mine intputs som har typen "radio" stylet */
+    input[type="radio"] {
+      width: 30px;
+    }
+    input[type="radio"]:checked {
+      accent-color: var(--lyserRoed600);
+    }
+
+    /* her bliver produkt informationen stylet */
+    .produkt_info {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .color1 {
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      background-color: black;
+    }
+    .card {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .card img,
+    .info {
+      width: 100px;
+      flex: 1 1 auto;
+    }
+
+    .info {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      justify-items: end;
+    }
+    .new_pris {
+      grid-area: 2/ 2 / 3 /3;
+    }
+
+    .udgifter {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 800px) {
+      .betalling_side {
+        gap: 50px;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .order {
+        order: 2;
+      }
+    }
+  </style>
+</Layout>
