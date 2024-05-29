@@ -5,29 +5,21 @@ import Buttons from "../../componets/Buttons.astro";
 import Line from "../../componets/Line.astro";
 
 //her henter vi noget data for vores database til nogle få sko som skal vises som inspiration
-const data = await fetch(
-  "https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
-    },
-  }
-).then((res) => res.json());
+const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2", {
+  method: "GET",
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
+  },
+}).then((res) => res.json());
 
 //her henter vi data ned fra en enkelt sko som kommer fra listeview
 export async function getStaticPaths() {
-  const data = await fetch(
-    "https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2",
-    {
-      method: "GET",
-      headers: {
-        apikey:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
-      },
-    }
-  ).then((response) => response.json());
+  const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2", {
+    method: "GET",
+    headers: {
+      apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
+    },
+  }).then((response) => response.json());
   return data.map((sko) => {
     return {
       params: { slug: sko.slug },
@@ -38,10 +30,7 @@ export async function getStaticPaths() {
 const { myData } = Astro.props;
 ---
 
-<Layout
-  titel={myData.produktnavn}
-  metaDescription="dette er singleveiw for hver sko"
->
+<Layout titel={myData.produktnavn} metaDescription="dette er singleveiw for hver sko">
   <nav>
     <ul>
       <li><a href="/">Forside</a> /</li>
@@ -55,28 +44,12 @@ const { myData } = Astro.props;
       <div class="enkeltsko">
         {myData.nyhed && <p class="nyhed">Nyhed</p>}
         {myData.udsalg && <p class="udsalg">Udsalg</p>}
-        <img
-          class="produktimg"
-          src={"/img/listeveiw/" + myData.produktimg}
-          alt={"billede af " + myData.produkt_beskrivelse}
-        />
+        <img class="produktimg" src={"/img/listeveiw/" + myData.produktimg} alt={"billede af " + myData.produkt_beskrivelse} width="500" height="500" />
       </div>
       <div class="ekstrabillede">
-        <img
-          class="produktimg"
-          src={"/img/listeveiw/" + myData.ekstrabillede1}
-          alt={"ekstra billede af " + myData.produkt_beskrivelse}
-        />
-        <img
-          class="produktimg"
-          src={"/img/listeveiw/" + myData.ekstrabillede2}
-          alt={"ekstra billede af " + myData.produkt_beskrivelse}
-        />
-        <img
-          class="produktimg"
-          src={"/img/listeveiw/" + myData.ekstrabillede3}
-          alt={"ekstra billede af " + myData.produkt_beskrivelse}
-        />
+        <img class="produktimg" src={"/img/listeveiw/" + myData.ekstrabillede1} alt={"ekstra billede af " + myData.produkt_beskrivelse} width="500" height="500" />
+        <img class="produktimg" src={"/img/listeveiw/" + myData.ekstrabillede2} alt={"ekstra billede af " + myData.produkt_beskrivelse} width="500" height="500" />
+        <img class="produktimg" src={"/img/listeveiw/" + myData.ekstrabillede3} alt={"ekstra billede af " + myData.produkt_beskrivelse} width="500" height="500" />
       </div>
     </div>
     <div class="produkt_info">
@@ -95,11 +68,7 @@ const { myData } = Astro.props;
         <p class="beskrivelse">{myData.produkt_beskrivelse}</p>
       </div>
       <div class="col">
-        {
-          myData.beforepris && (
-            <p class="before_pris">Før pris: {myData.beforepris} DKK</p>
-          )
-        }
+        {myData.beforepris && <p class="before_pris">Før pris: {myData.beforepris} DKK</p>}
 
         <p>{myData.price}</p>
 
@@ -131,9 +100,7 @@ const { myData } = Astro.props;
       }
     </div>
     <div class="btn">
-      <Buttons variant="primary"
-        ><a class="button" href="/listeveiw">Se flere sko</a></Buttons
-      >
+      <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko</a></Buttons>
     </div>
   </div>
 

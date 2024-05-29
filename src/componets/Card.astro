@@ -8,7 +8,7 @@ const { data } = Astro.props;
   <a class="card_a" href={`/sko/${data.slug}`}>
     <div class="produkt_card">
       <div class="produkttekst">
-        <img class="produktbillede" src={"/img/listeveiw/" + data.produktimg} alt={"billede af " + data.produkt_beskrivelse} />
+        <img class="produktbillede" src={"/img/listeveiw/" + data.produktimg} alt={"billede af " + data.produkt_beskrivelse} width="500" height="500" />
 
         {data.nyhed && <p class="nyhed">Nyhed</p>}
         {data.udsolgt && <p class="udsolgt">udsolgt</p>}
