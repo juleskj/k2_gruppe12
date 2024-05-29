@@ -33,7 +33,7 @@ const { myData } = Astro.props;
 <Layout titel="tittel">
   <nav>
     <ul>
-      <li><a href="#">Forside</a> /</li>
+      <li><a href="/">Forside</a> /</li>
       <li><a href="/listeveiw">Sko</a> /</li>
       <li><p>{myData.produktnavn}</p></li>
     </ul>
@@ -68,7 +68,7 @@ const { myData } = Astro.props;
         <p class="beskrivelse">{myData.produkt_beskrivelse}</p>
       </div>
       <div class="col">
-        {myData.beforepris && <p class="befor_pris">Før pris: {myData.beforepris} DKK</p>}
+        {myData.beforepris && <p class="before_pris">Før pris: {myData.beforepris} DKK</p>}
 
         <p>{myData.price}</p>
 
@@ -98,6 +98,9 @@ const { myData } = Astro.props;
           return <Card data={sko} />;
         })
       }
+    </div>
+    <div class="btn">
+      <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko</a></Buttons>
     </div>
   </div>
 
@@ -140,6 +143,10 @@ const { myData } = Astro.props;
       top: 0;
       padding: 5px;
       text-transform: uppercase;
+    }
+
+    .before_pris {
+      text-decoration: line-through var(--orange600) 2px;
     }
 
     .produktnavn {
@@ -205,10 +212,17 @@ const { myData } = Astro.props;
     .inspiration_col h2 {
       text-align: center;
     }
+
+    .btn {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px 0;
+    }
+
     .col {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 2rem;
     }
     .grid_1-1 {
       display: grid;
@@ -220,6 +234,10 @@ const { myData } = Astro.props;
         display: flex;
         flex-direction: row;
         gap: 50px;
+      }
+
+      .btn {
+        padding: 50px 0;
       }
       .desktop {
         display: flex;
