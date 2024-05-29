@@ -2,6 +2,7 @@
 import Layout from "../../componets/Layout.astro";
 import Card from "../../componets/Card.astro";
 import Buttons from "../../componets/Buttons.astro";
+import Line from "../../componets/Line.astro";
 
 //her henter vi noget data for vores database til nogle få sko som skal vises som inspiration
 const data = await fetch(
@@ -117,6 +118,7 @@ const { myData } = Astro.props;
   </div>
   <div class="inspiration_col">
     <h2>Bliv inspireret</h2>
+    <Line />
     <div class="inspiration">
       {
         data.slice(0, 4).map((sko) => {
