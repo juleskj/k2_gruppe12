@@ -6,12 +6,12 @@ import Buttons from "../componets/Buttons.astro";
 <Layout titel="Kurv">
   <div class="produkt_info">
     <h1>Din kurv</h1>
-    <h2>DLS Sport</h2>
     <div class="desktop_row">
       <section class="card">
         <img src="/img/listeveiw/sko_1_1.webp" alt="billede af sneaker sko som er lyserød" />
 
         <div class="info">
+          <h2>DLS Sport</h2>
           <p class="str">str:37</p>
           <p class="before_pris befor_pris">Før:1000Dkk</p>
           <p class="new_pris">800DKK</p>
@@ -49,6 +49,7 @@ import Buttons from "../componets/Buttons.astro";
       flex-direction: column;
       gap: 40px;
       padding-bottom: 100px;
+      align-items: flex-start;
     }
     .color1 {
       border-radius: 50%;
@@ -71,7 +72,7 @@ import Buttons from "../componets/Buttons.astro";
     }
     .card img,
     .info {
-      width: 100px;
+      width: 250px;
       flex: 1 1 auto;
     }
 
