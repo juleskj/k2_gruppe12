@@ -9,20 +9,25 @@ const { sissel_kjole } = Astro.props;
 </section>
 
 <script>
+  // her declerarer vi butikIcon og spanTekst så vi nemt kan tage fat i elemntet og skriv mindre kode
   const butikIcon = document.querySelector("section");
-
   const spanTekst = document.querySelector("span.tekst");
 
+  //her tilføjer vi en eventlistener som skal "lytte" efter at musen går over section aka. butikIcon
+  // når den så opfanger at musen er over elementet skal den gå ned til funtionen mouseOverIcon
   butikIcon.addEventListener("mouseover", mouseOverIcon);
 
   function mouseOverIcon() {
     console.log("musen er over");
+    // her fjerne den classen "none" fra span elementet som har teksten "kun købes i butik"
     spanTekst.classList.remove("none");
+    // efter det skal den også "lytte" efter eventet når musen går ud fra sectionen og gå videre til mouseOutIcon
     this.addEventListener("mouseout", mouseOutIcon);
   }
 
   function mouseOutIcon() {
     spanTekst.classList.add("none");
+    // her tilføjer vi bare klassen none til span elementet igen
     console.log("musen er out");
   }
 </script>
