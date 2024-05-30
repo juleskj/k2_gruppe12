@@ -3,37 +3,64 @@ import Layout from "../componets/Layout.astro";
 import Buttons from "../componets/Buttons.astro";
 import Card from "../componets/Card.astro";
 import Line from "../componets/Line.astro";
-const data = await fetch("https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2", {
-  method: "GET",
-  headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
-  },
-}).then((res) => res.json());
+const data = await fetch(
+  "https://xdwlizqafawwahsaxilk.supabase.co/rest/v1/k2",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhkd2xpenFhZmF3d2Foc2F4aWxrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYzNjI3ODEsImV4cCI6MjAzMTkzODc4MX0.YV7fOme_czbNaDg9hVyfGOe8Tt3UwV0wnnyKZrlbPOw",
+    },
+  }
+).then((res) => res.json());
 console.log(data);
 ---
 
-<Layout titel="Forside" metaDescription="Dette er vores forside" hero_video="/stop_mostion.mp4" hasVideo="true" hasCarousel="true" hasCarouselTekst="true">
+<Layout
+  titel="Forside"
+  metaDescription="Dette er vores forside"
+  hero_video="/stop_mostion.mp4"
+  hasVideo="true"
+  hasCarousel="true"
+  hasCarouselTekst="true"
+>
   <div class="grid_kategori_index">
     <div class="billede_med_tekst">
       <div class="background-image-k2"></div>
       <div class="tekst_over_billede">
         <h1 class="hvid h1_k2">K2</h1>
-        <p class="hvid">Velkommen til K2, hvor kvalitet og elegance går hånd i hånd. Vores sko er håndplukket fra de bedste designere i Italien, Spanien og Danmark, mens vores kjoler er skabt af Sissel Edelbo og lavet af reststoffer, som garenterer en bæredygtig og unik stil til enhver kvinde.</p>
-        <p class="hvid">Lad dig forføre af vores udvalg og oplev en verden af stil og kvalitet.</p>
+        <p class="hvid">
+          Velkommen til K2, hvor kvalitet og elegance går hånd i hånd. Vores sko
+          er håndplukket fra de bedste designere i Italien, Spanien og Danmark,
+          mens vores kjoler er skabt af Sissel Edelbo og lavet af reststoffer,
+          som garenterer en bæredygtig og unik stil til enhver kvinde.
+        </p>
+        <p class="hvid">
+          Lad dig forføre af vores udvalg og oplev en verden af stil og
+          kvalitet.
+        </p>
       </div>
     </div>
     <div class="grid_kategori_venstre">
       <div class="grid_kategori">
         <div class="midten">
           <h2 class="luft_klar">KLAR TIL SOMMEREN?</h2>
-          <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko</a></Buttons>
+          <Buttons
+            variant="primary"
+            link="/listeveiw"
+            displayText="Se flere sko"
+          />
         </div>
         <img src="/img/sko.webp" alt="Sko" />
       </div>
       <div class="grid_kategori">
         <div class="midten">
           <h2 class="luft_klar">KLAR TIL FEST?</h2>
-          <Buttons variant="primary"><a class="button" href="/sissel_edelbo">Se mere tøj</a></Buttons>
+          <Buttons
+            variant="primary"
+            link="/sissel_edelbo"
+            displayText="Se mere tøj"
+          />
         </div>
         <img src="/img/toej.webp" alt="Tøj" />
       </div>
@@ -50,23 +77,66 @@ console.log(data);
       }
     </section>
     <div class="popular_button">
-      <Buttons variant="primary"><a class="button" href="/listeveiw">Se flere sko </a></Buttons>
+      <Buttons variant="primary" link="/listeveiw" displayText="Se flere sko" />
     </div>
   </div>
 
   <div class="instagram">
     <h2>Følg K2 på Instagram</h2>
     <Line />
-    <a href="https://www.instagram.com/k2shoesandbags?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+    <a
+      href="https://www.instagram.com/k2shoesandbags?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+      target="_blank"
+    >
       <div class="grid_istagram">
-        <img src="/img/instagram_8.webp" alt="kvinde med broderet skjort" width=" 500" height="500" />
-        <img src="/img/instagram_1.webp" alt="slangeskinds sko" width="500" height="500" />
-        <img src="/img/instagram_7.webp" alt="mønstret blazer" width="500" height="500" />
-        <img src="/img/instagram_4.webp" alt="mesh sko med perler" width="500" height="500" />
-        <img src="/img/instagram_2.webp" alt="koral farvet kjole med puff" width="500" height="500" />
-        <img src="/img/instagram_5.webp" alt="lilla broderet skjorte" width="500" height="500" />
-        <img src="/img/instagram_6.webp" alt="palliet sko og sandal" width="500" height="500" />
-        <img src="/img/instagram_3.webp" alt="hvid skjorte" width="500" height="500" />
+        <img
+          src="/img/instagram_8.webp"
+          alt="kvinde med broderet skjort"
+          width=" 500"
+          height="500"
+        />
+        <img
+          src="/img/instagram_1.webp"
+          alt="slangeskinds sko"
+          width="500"
+          height="500"
+        />
+        <img
+          src="/img/instagram_7.webp"
+          alt="mønstret blazer"
+          width="500"
+          height="500"
+        />
+        <img
+          src="/img/instagram_4.webp"
+          alt="mesh sko med perler"
+          width="500"
+          height="500"
+        />
+        <img
+          src="/img/instagram_2.webp"
+          alt="koral farvet kjole med puff"
+          width="500"
+          height="500"
+        />
+        <img
+          src="/img/instagram_5.webp"
+          alt="lilla broderet skjorte"
+          width="500"
+          height="500"
+        />
+        <img
+          src="/img/instagram_6.webp"
+          alt="palliet sko og sandal"
+          width="500"
+          height="500"
+        />
+        <img
+          src="/img/instagram_3.webp"
+          alt="hvid skjorte"
+          width="500"
+          height="500"
+        />
       </div>
     </a>
   </div>
@@ -74,10 +144,21 @@ console.log(data);
     <div class="background-image">
       <div class="tekstbox">
         <h2 class="luft_om_h2">Om K2</h2>
-        <p class="p luft_om">Marie Louise og Ole har i gennem mange år, budt på lækre sko og tøj, som kommer fra de dygtigste designere og er tilgængelige både i vores hyggelige butik på Lyngby Hovedgade 72 og online på vores webshop.</p>
-        <p class="p luft_om">Dyk ned i vores verden af elegance og stil, hvor hver en detalje er nøje udvalgt til at forkæle dine sanser.</p>
+        <p class="p luft_om">
+          Marie Louise og Ole har i gennem mange år, budt på lækre sko og tøj,
+          som kommer fra de dygtigste designere og er tilgængelige både i vores
+          hyggelige butik på Lyngby Hovedgade 72 og online på vores webshop.
+        </p>
+        <p class="p luft_om">
+          Dyk ned i vores verden af elegance og stil, hvor hver en detalje er
+          nøje udvalgt til at forkæle dine sanser.
+        </p>
         <div>
-          <Buttons variant="primary"><a class="button" href="/omk2">Læs mere</a></Buttons>
+          <Buttons
+            variant="primary"
+            link="/omk2"
+            displayText="Læs mere om k2"
+          />
         </div>
       </div>
     </div>
