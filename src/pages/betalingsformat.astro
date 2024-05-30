@@ -309,37 +309,35 @@ import Submit from "../componets/Submit.astro";
     const hjem = document.querySelector(".hjem");
     const andenAdresse = document.querySelector(".anden_adresse");
     const sammeAdresse = document.querySelector(".samme_adresse");
+    const faktureringsAdresse = document.querySelector(".fakturerings_adresse");
 
-    document.querySelector(".butik").addEventListener("mousedown", clickButik);
-    document.querySelector(".hjem").addEventListener("mousedown", clickHjem);
-    document
-      .querySelector(".anden_adresse")
-      .addEventListener("mousedown", clickAndenAdresse);
+    //her sætter vi en eventlistener på kanpperne så formen kan være dynamisk
+    butik.addEventListener("mousedown", clickButik);
+    hjem.addEventListener("mousedown", clickHjem);
+    andenAdresse.addEventListener("mousedown", clickAndenAdresse);
+    sammeAdresse.addEventListener("mousedown", clickSammeAdresse);
 
-    document
-      .querySelector(".samme_adresse")
-      .addEventListener("mousedown", clickSammeAdresse);
-
+    //når man klikker på "sammeadresse" knap så sætter cman klassen none på formen "faktureringsAdresse"
     function clickSammeAdresse() {
-      document.querySelector(".fakturerings_adresse").classList.add("none");
+      faktureringsAdresse.classList.add("none");
     }
-
+    //og når man klikker på "faktureringsAdresse" så sætter vi klassen none på "sammeadresse"
     function clickAndenAdresse() {
-      document.querySelector(".fakturerings_adresse").classList.remove("none");
+      faktureringsAdresse.classList.remove("none");
     }
 
     function clickButik() {
       console.log("butik");
       document.querySelector(".hjem_levering").classList.add("none");
       document.querySelector(".butik_levering").classList.remove("none");
-      document.querySelector(".fakturerings_adresse").classList.remove("none");
-
+      faktureringsAdresse.classList.remove("none");
+      //for at radio knappen passe til den form der vises sætter vi den til checked
       document.getElementById("anden_adresse").checked = true;
     }
 
     function clickHjem() {
       console.log("hjem");
-      document.querySelector(".fakturerings_adresse").classList.add("none");
+      faktureringsAdresse.classList.add("none");
       document.querySelector(".butik_levering").classList.add("none");
       document.querySelector(".hjem_levering").classList.remove("none");
       document.getElementById("samme_adresse").checked = true;
