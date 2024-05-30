@@ -4,11 +4,11 @@ const { sissel_kjole } = Astro.props;
 
 <section class="butik_icon">
   <span class="icon"></span>
-  <span class="tekst none"><p>Købes kun i butik</p></span>
+
   <img class="kjole_img" src={sissel_kjole} alt="billede af sissel kjole" />
 </section>
 
-<script>
+<!-- <script>
   // her declerarer vi butikIcon og spanTekst så vi nemt kan tage fat i elemntet og skriv mindre kode
   const butikIcon = document.querySelector("section");
   const spanTekst = document.querySelector("span.tekst");
@@ -30,7 +30,7 @@ const { sissel_kjole } = Astro.props;
     // her tilføjer vi bare klassen none til span elementet igen
     console.log("musen er out");
   }
-</script>
+</script> -->
 
 <style>
   .none {
@@ -43,18 +43,14 @@ const { sissel_kjole } = Astro.props;
     object-fit: cover;
   }
 
-  .butik_icon:hover {
-    filter: brightness(70%);
-  }
-
   span.icon {
     position: absolute;
     top: 2%;
     right: 2%;
-    background-image: url(/img/butik_only_hvid.svg);
+    background-image: url(/img/butik_icon_hvid.svg);
     background-size: cover;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
   span.tekst {
     position: absolute;

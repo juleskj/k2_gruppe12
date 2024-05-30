@@ -35,42 +35,186 @@ const {
     <Header />
     <div class="billede_med_tekst">
       {hasImg && <img src={hero_img} alt="Hero image" class="hero_img" />}
-      {hasVideo && <video controls autoplay loop src={hero_video} class="hero_video" />}
+      {
+        hasVideo && (
+          <video controls autoplay loop src={hero_video} class="hero_video" />
+        )
+      }
       {
         hasCarousel && (
           <div class="toej">
             <a href="/sissel_edelbo">
               <div class="toej-slide">
-                <img src="/img/sissel_slider_1.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_2.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_3.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_4.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_5.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_6.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_7.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_8.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_9.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_10.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_11.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_12.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_13.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_14.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
+                <img
+                  src="/img/sissel_slider_1.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_2.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_3.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_4.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_5.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_6.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_7.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_8.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_9.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_10.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_11.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_12.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_13.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_14.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
               </div>
               <div class="toej-slide">
-                <img src="/img/sissel_slider_1.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_2.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_3.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_4.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_5.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_6.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_7.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_8.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_9.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_10.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_11.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_12.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_13.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
-                <img src="/img/sissel_slider_14.webp" alt="kjole fra Sissel Edelbo" width="500" height="600" />
+                <img
+                  src="/img/sissel_slider_1.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_2.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_3.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_4.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_5.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_6.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_7.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_8.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_9.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_10.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_11.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_12.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_13.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
+                <img
+                  src="/img/sissel_slider_14.webp"
+                  alt="kjole fra Sissel Edelbo"
+                  width="500"
+                  height="600"
+                />
               </div>
             </a>
           </div>
@@ -105,9 +249,8 @@ const {
         {
           hasUnderTekst && (
             <div class="header_undertekst">
-              <h2>{hero_undertekst}</h2>
-
               <img src={hero_icon} alt="Hero image" class="hero_icon" />
+              <h2>{hero_undertekst}</h2>
             </div>
           )
         }
@@ -163,12 +306,12 @@ const {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 
     color: var(--offBlack);
     background-color: var(--offWhite);
-    padding: 5px 5px;
-    font-weight: normal;
+    padding: 5px 15px;
+    font-weight: lighter;
     border-radius: 2px;
   }
 
@@ -179,8 +322,8 @@ const {
 
   @media (min-width: 800px) {
     .hero_icon {
-      width: 50px;
-      height: 50px;
+      width: 80px;
+      height: 80px;
     }
   }
 
